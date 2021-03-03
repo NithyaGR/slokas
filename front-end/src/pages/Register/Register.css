@@ -1,0 +1,46 @@
+.register {
+    height: 100%;
+    width: 100%;
+    background-image: url("./Krishna.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .bg_image {
+    /* The image used */
+    /* background-image: url("../KrishnaArjuna.jpg");  */
+  
+    /* Full height */
+    height: 100vh;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+.registerForm{
+
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    margin-top: -150px;
+    margin-left: -150px;
+    background: white;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255,255,255,0.3));
+    border-radius: 20px;
+    z-index: 2;
+    backdrop-filter: blur(20px);
+    align-items: center;
+    /* justify-content: center; */
+    display: flex;
+    flex-direction: column;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 20px;
+}
+input{
+    width: 300px;
+}

@@ -1,0 +1,26 @@
+
+.loginForm{
+
+    width: 350px;
+    height: 220px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -150px;
+    margin-left: -150px;
+    background: white;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255,255,255,0.3));
+    border-radius: 20px;
+    z-index: 2;
+    backdrop-filter: blur(20px);
+    align-items: center;
+    /* justify-content: center; */
+    display: flex;
+    flex-direction: column;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 20px;
+}
+input{
+    width: 300px;
+}
