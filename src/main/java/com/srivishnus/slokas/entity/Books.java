@@ -13,6 +13,7 @@ import javax.persistence.Table;
 
 @Entity // to make this class as a JPA entity
 @Table (name = "books")// to map this class with our books table
+//adding this comment to check my github - update
 public class Books {
 	
 	
