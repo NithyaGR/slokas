@@ -19,6 +19,9 @@ target/
 *.iml
 *.ipr
 
+### to ignore node_modules ###
+node_modules/
+
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/
