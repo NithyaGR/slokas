@@ -8,6 +8,7 @@ import Chapter from '../Books/SriBhagavadGita/Chapter';
 import Login from '../Login/Login';
 import About from '../../components/About/About';
 import Register from '../Register/Register';
+import Error from '../../components/Error/Error';
 // import Register from '../Register/Register';
 
 export default class Routes extends Component {
@@ -29,6 +30,8 @@ export default class Routes extends Component {
                  <Route path='/about' exact component={About} /> 
 
                  <Route path='/register' component = { Register } />
+
+                 <Route component={Error} />
 
                 {/* <Route path='/register' component={Register} />
 

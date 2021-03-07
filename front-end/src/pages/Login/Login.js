@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import Container from "react-bootstrap/Container";
 import './Login.css';
 import DataService from '../../api/DataService';
 
@@ -6,7 +7,12 @@ import DataService from '../../api/DataService';
 class Login extends Component {
 
     state = {      
-         users : []
+         user : {
+            firstName: '',
+            lastName: '',
+            email : '',
+            userPassword : ''
+         }
     }
     // componentDidMount(){
     //     console.log('componentDidMount - to get all the verses in the selected chapter');
@@ -66,7 +72,7 @@ class Login extends Component {
   
 render(){
     return(
-
+        <Container className="w-100 p-3">
         <div>
             <h3>Login</h3>
             <div className='loginForm'>
@@ -79,14 +85,14 @@ render(){
                  <br />
                  <div className='form-group'>
                 <input type='password' className='form-control' id='inputPassword' 
-                placeholder='Password' onChange={this.handleChange}/>
+                placeholder='Password'  onChange={this.handleChange}/>
                  </div>
                  <br />
                  <button type='submit' className='btn btn-primary' onClick={this.handleClick}>Submit</button>   
             </form>
             </div>   
         </div>
-        
+        </Container>
   
     
     )
