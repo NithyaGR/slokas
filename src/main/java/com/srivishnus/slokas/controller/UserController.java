@@ -24,7 +24,7 @@ import com.srivishnus.slokas.repository.UserRepository;
 // We use this annotation to create Rest APIs - we are using Spring MVC to develop this 
 // controller layer
 @RestController
-@CrossOrigin(origins = "http://localhost:4200")
+//@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/users")
 public class UserController {
 
