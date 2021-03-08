@@ -34,7 +34,7 @@ class Home extends Component {
         let count = 1;
         return(
             <div>
-                <h3>Display books here</h3>
+                <h3>Books!</h3>
                 <table className='table'>
             <thead className='thead-dark'>
               <tr>
