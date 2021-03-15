@@ -21,6 +21,9 @@
     padding-right: 5px;
     padding-top: 20px;
 }
-input{
-    width: 300px;
+#inputEmail{
+    width: 400px;
+}
+#inputPassword{
+    width: 400px;
 }
