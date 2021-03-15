@@ -1,6 +1,8 @@
 import { Component } from 'react';
 import './Register.css';
 import DataService from '../../api/DataService';
+import { Form, Button } from 'react-bootstrap';
+
 
 
 class Register extends Component {
@@ -53,19 +55,6 @@ class Register extends Component {
             console.log(error);
             alert('Connection Error - Try again');
         })
-        // setTimeout(() => {
-            
-        //     if(this.state.user.email === userEmail && this.state.user.userPassword === userPassword){
-        //         sessionStorage.setItem('loggedInUser', this.state.user.firstName);  
-        //         console.log('Login successful');
-        //         alert("Login Successful");
-        //         this.props.history.push('/home');
-                  
-        //         }
-        //         else {
-        //           alert('Wrong credentials!');
-        //        }  
-        // }, 5000);
 
     }
     
@@ -75,7 +64,42 @@ render(){
         <div className='register'>
             <div className='registerForm'>
                 <br />
-                <form>
+                <Form>
+                <Form.Group controlId='formBasicFirstName'>
+                <Form.Control type='first Name' placeholder='Enter Your First Name' id='firstName'
+                    value = {this.state.firstName} onChange={this.handleChange} />
+                     </Form.Group>
+                 <br />
+                 <div className='form-group'>
+                <input type='lastName' className='form-control' id='lastName' 
+                placeholder='Enter Your Last Name' value = {this.state.lastName} onChange={this.handleChange}/>
+                 </div>
+                 <br />
+                 <div className='form-group'>
+                <input type='email' className='form-control' id='email' 
+                placeholder='Enter Your Email' value = {this.state.email} onChange={this.handleChange}/>
+                 </div>
+                 <br />
+                 <div className='form-group'>
+                <input type='password' className='form-control' id='userPassword' 
+                placeholder='Password' value = {this.state.password} onChange={this.handleChange}/>
+                 <br />
+                 </div>
+                 <button type='submit' className='btn btn-primary' onClick={this.handleClick}>Submit</button>   
+            </Form>
+            </div>   
+            <div className='bg_image'>
+            </div>
+        </div>
+        
+  
+    
+    )
+}
+}
+export default Register;
+/*
+<form>
                 <div className='form-group'>
                      <input type='first Name' className='form-control' id='firstName' 
                       placeholder='Enter Your First Name' value = {this.state.firstName} onChange={this.handleChange}/>
@@ -98,15 +122,5 @@ render(){
                  </div>
                  <button type='submit' className='btn btn-primary' onClick={this.handleClick}>Submit</button>   
             </form>
-            </div>   
-            <div className='bg_image'>
-            </div>
-        </div>
-        
-  
-    
-    )
-}
-}
-export default Register;
+*/
   

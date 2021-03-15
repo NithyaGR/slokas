@@ -16,18 +16,6 @@ class Login extends Component {
             userPassword : ''
          }
     }
-    // componentDidMount(){
-    //     console.log('componentDidMount - to get all the verses in the selected chapter');
-    //     DataService.executeUserServiceGetAll()
-    //       .then(
-    //           response => {
-    //               console.log(response.data);
-    //               this.setState({users : response.data});
-    //           }
-    //       ).catch( error => {
-    //         console.log(error);
-    //     })     
-    // }
     handleChange = (e) =>{
         //to bind the text which we entered and to store in that corresponding ids  
         this.setState({ [e.target.id]: e.target.value });
@@ -74,26 +62,26 @@ class Login extends Component {
   
 render(){
     return(
-        <Container className="w-100 p-3">
+        <Container className='w-100 p-3'>
         <div>
             <h3>Login</h3>
             <div className='login'>
             <Form>
-                <Form.Group controlId="formBasicEmail">
-                    <Form.Label>Email address</Form.Label>
-                    <Form.Control type="email" size='sm' placeholder="Enter email" id='inputEmail'/>
+                <Form.Group controlId='formBasicEmail'>
+                    {/* <Form.Label>Email address</Form.Label> */}
+                    <Form.Control type='email' placeholder='Enter email' id='inputEmail'/>
                 </Form.Group>
 
-                <Form.Group controlId="formBasicPassword">
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control type="password" size='sm' placeholder="Password" id='inputPassword'/>
+                <Form.Group controlId='formBasicPassword'>
+                    {/* <Form.Label>Password</Form.Label> */}
+                    <Form.Control type='password' placeholder='Password' id='inputPassword'/>
                 </Form.Group>
                 <br />
-                <Button variant="primary" type="submit" onClick={this.handleClick}>
+                <Button variant='primary' type='submit' onClick={this.handleClick}>
                     Submit
                 </Button>
-                </Form>
-                </div>
+            </Form>
+            </div>
         </div>
         </Container>
   
