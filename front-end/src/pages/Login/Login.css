@@ -21,13 +21,9 @@
     padding-right: 5px;
     padding-top: 20px;
 } */
-/* #inputEmail{
-    width: 400px;
-}
-#inputPassword{
-    width: 400px;
-} */
+
 .login{
     width: 500px;
-    
+    align-items: center;
+
 }
