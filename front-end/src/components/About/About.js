@@ -15,11 +15,11 @@ const About = (props) => {
                 Adiyen offer this website to the Lotus Feet of my Acharyar 
                 HH Sri Sri Krishna Desika Yatindra Jeer Swamiji and to all the devotees of our beloved Lord!
 
-                We are going to upload the link of all our Acharyar's books and YouTube link for HIS 
+                We are going to upload the link of all our Acharyar's books and YouTube link and HIS 
                 commentaries as well. 
 
                 Thank you for visiting this site! 
-                Jai Sriman Naryana!
+                Jai Sriman Narayana!
                 
              </p>
             </div>

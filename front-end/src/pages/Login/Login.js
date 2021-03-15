@@ -80,14 +80,14 @@ render(){
             <Form>
                 <Form.Group controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
-                    <Form.Control type="email" placeholder="Enter email" id='inputEmail'/>
+                    <Form.Control type="email" size='sm' placeholder="Enter email" id='inputEmail'/>
                 </Form.Group>
 
                 <Form.Group controlId="formBasicPassword">
                     <Form.Label>Password</Form.Label>
-                    <Form.Control type="password" placeholder="Password" id='inputPassword'/>
+                    <Form.Control type="password" size='sm' placeholder="Password" id='inputPassword'/>
                 </Form.Group>
-                
+                <br />
                 <Button variant="primary" type="submit" onClick={this.handleClick}>
                     Submit
                 </Button>
