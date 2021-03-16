@@ -47,6 +47,7 @@ class Login extends Component {
             console.log(this.state.user.userPassword);
             if(this.state.user.email === userEmail && this.state.user.userPassword === userPassword){
                 sessionStorage.setItem('loggedInUser', this.state.user.firstName);  
+                localStorage.setItem('loggedUser', this.state.user.firstName);
                 console.log('Login successful');
                 alert("Login Successful");
                 this.props.history.push('/home');
@@ -58,7 +59,27 @@ class Login extends Component {
         }, 5000);
 
     }
-    
+    // validate(){
+    //     //let input = this.state.input;
+    //     let errors = {};
+    //     let isValid = true;
+    //     if (typeof this.state.email !== "undefined") {
+    //       var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
+    //       if (!pattern.test(this.state.email)) {
+    //         isValid = false;
+    //         errors["email"] = "Please enter valid email address.";
+    //       }
+    //     }
+    //     if (!this.state.userPassword) {
+    //       isValid = false;
+    //       errors["userPassword"] = "Please enter your password.";
+    //     }
+    //      this.setState({
+    //       errors: errors
+    //     });
+    //     return isValid;
+  
+    // }   
   
 render(){
     return(

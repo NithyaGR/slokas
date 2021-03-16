@@ -14,6 +14,7 @@ import Error from '../../components/Error/Error';
 export default class Routes extends Component {
     render() {
         console.log(sessionStorage.getItem('selectedChapterNo'));
+        console.log(sessionStorage.getItem('loggedInUser')); 
         return (
             
         <Switch>

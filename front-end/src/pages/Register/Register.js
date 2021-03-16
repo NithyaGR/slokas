@@ -25,16 +25,6 @@ class Register extends Component {
     handleClick=(e) => {
         e.preventDefault();
         console.log('inside handle submit');
-        // if(this.validate()){
-        //     console.log(this.state);
-        //     let input = {};
-        //     input["name"] = "";
-        //     input["email"] = "";
-        //     input["comment"] = "";
-        //     this.setState({input:input});
-        //      alert('Demo Form is submited');
-    
-        // }
         if(this.validate()){
         const newUser = {
             firstName: this.state.firstName,
