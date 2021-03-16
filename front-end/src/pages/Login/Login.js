@@ -65,7 +65,7 @@ render(){
         <Container className='w-100 p-3'>
         <div>
             <h3>Login</h3>
-            <div className='login'>
+            
             <Form>
                 <Form.Group controlId='formBasicEmail'>
                     <Form.Label>Email address</Form.Label>
@@ -81,7 +81,7 @@ render(){
                     Submit
                 </Button>
             </Form>
-            </div>
+            
         </div>
         </Container>
   
