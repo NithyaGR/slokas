@@ -70,22 +70,22 @@ render(){
                     value = {this.state.firstName} onChange={this.handleChange} />
                      </Form.Group>
                  <br />
-                 <div className='form-group'>
-                <input type='lastName' className='form-control' id='lastName' 
+                 <Form.Group controlId='formBasicLastName'>
+                <Form.Control type='lastName' id='lastName' 
                 placeholder='Enter Your Last Name' value = {this.state.lastName} onChange={this.handleChange}/>
-                 </div>
+                 </Form.Group>
                  <br />
-                 <div className='form-group'>
-                <input type='email' className='form-control' id='email' 
+                 <Form.Group controlId='formBasicEmail'>
+                <Form.Control type='email' id='email' 
                 placeholder='Enter Your Email' value = {this.state.email} onChange={this.handleChange}/>
-                 </div>
+                 </Form.Group>
                  <br />
-                 <div className='form-group'>
-                <input type='password' className='form-control' id='userPassword' 
-                placeholder='Password' value = {this.state.password} onChange={this.handleChange}/>
+                 <Form.Group controlId='formBasicPassword'>
+                <Form.Control type='password'  id='userPassword' 
+                placeholder='Password' value = {this.state.password} onChange={this.handleChange}/> 
+                 </Form.Group>
                  <br />
-                 </div>
-                 <button type='submit' className='btn btn-primary' onClick={this.handleClick}>Submit</button>   
+                 <Button variant='primary' type='submit'  onClick={this.handleClick}>Submit</Button>   
             </Form>
             </div>   
             <div className='bg_image'>
