@@ -8,6 +8,7 @@ class Navigation extends Component {
     handleClick = (e) =>{
         sessionStorage.removeItem('loggedInUser');
         console.log(sessionStorage.getItem('loggedInUser'));
+        localStorage.removeItem('loggedUser');
         alert('You are logged out successfully! Thank you for visiting us!');
     }
     render(){
@@ -22,7 +23,7 @@ class Navigation extends Component {
                     <Nav.Link><NavLink to="/home">Home</NavLink></Nav.Link>
                     <Nav.Link><NavLink to="/about">About</NavLink></Nav.Link>
                     <Nav.Link><NavLink to="/register">Register</NavLink></Nav.Link>
-                    { sessionStorage.getItem('loggedInUser') 
+                    { localStorage.getItem('loggedUser') 
                     ?  <Nav.Link><NavLink to="/home" onClick={this.handleClick}>Logout</NavLink></Nav.Link> 
                     :  <Nav.Link><NavLink to="/login">Login</NavLink></Nav.Link> }
                 </Navbar.Collapse>

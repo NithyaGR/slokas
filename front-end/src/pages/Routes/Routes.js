@@ -15,7 +15,7 @@ export default class Routes extends Component {
     render() {
         console.log(sessionStorage.getItem('selectedChapterNo'));
         console.log(sessionStorage.getItem('loggedInUser')); 
-        let loggedUser = sessionStorage.getItem('loggedInUser');
+        let loggedUser = localStorage.getItem('loggedInUser');
         return (
             
         <Switch>
