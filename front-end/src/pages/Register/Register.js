@@ -13,7 +13,8 @@ class Register extends Component {
              lastName: '',
              email: '',
              userPassword: ''
-         }
+         },
+         errors : {}
     }
     
     handleChange = (e) =>{
@@ -24,6 +25,17 @@ class Register extends Component {
     handleClick=(e) => {
         e.preventDefault();
         console.log('inside handle submit');
+        // if(this.validate()){
+        //     console.log(this.state);
+        //     let input = {};
+        //     input["name"] = "";
+        //     input["email"] = "";
+        //     input["comment"] = "";
+        //     this.setState({input:input});
+        //      alert('Demo Form is submited');
+    
+        // }
+        if(this.validate()){
         const newUser = {
             firstName: this.state.firstName,
             lastName: this.state.lastName,
@@ -55,9 +67,41 @@ class Register extends Component {
             console.log(error);
             alert('Connection Error - Try again');
         })
+    }
+    else {
+        alert('Check your entered data!')
+    }
 
     }
-    
+  validate(){
+      //let input = this.state.input;
+      let errors = {};
+      let isValid = true;
+      if (!this.state.firstName) {
+        isValid = false;
+        errors["firstName"] = "Please enter your first name.";
+      }
+      if (!this.state.lastName) {
+        isValid = false;
+        errors["lastName"] = "Please enter your last Address.";
+      }
+      if (typeof this.state.email !== "undefined") {
+        var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
+        if (!pattern.test(this.state.email)) {
+          isValid = false;
+          errors["email"] = "Please enter valid email address.";
+        }
+      }
+      if (!this.state.userPassword) {
+        isValid = false;
+        errors["userPassword"] = "Please enter your password.";
+      }
+       this.setState({
+        errors: errors
+      });
+      return isValid;
+
+  }  
   
 render(){
     return(
@@ -68,21 +112,25 @@ render(){
                 <Form.Group controlId='formBasicFirstName'>
                 <Form.Control type='first Name' placeholder='Enter Your First Name' id='firstName'
                     value = {this.state.firstName} onChange={this.handleChange} />
-                     </Form.Group>
+                <div className="text-danger">{this.state.errors.firstName}</div>    
+                </Form.Group>
                  <br />
                  <Form.Group controlId='formBasicLastName'>
                 <Form.Control type='lastName' id='lastName' 
                 placeholder='Enter Your Last Name' value = {this.state.lastName} onChange={this.handleChange}/>
+                 <div className="text-danger">{this.state.errors.lastName}</div>
                  </Form.Group>
                  <br />
                  <Form.Group controlId='formBasicEmail'>
                 <Form.Control type='email' id='email' 
                 placeholder='Enter Your Email' value = {this.state.email} onChange={this.handleChange}/>
+                 <div className="text-danger">{this.state.errors.email}</div>
                  </Form.Group>
                  <br />
                  <Form.Group controlId='formBasicPassword'>
                 <Form.Control type='password'  id='userPassword' 
                 placeholder='Password' value = {this.state.password} onChange={this.handleChange}/> 
+                 <div className="text-danger">{this.state.errors.userPassword}</div>
                  </Form.Group>
                  <br />
                  <Button variant='primary' type='submit'  onClick={this.handleClick}>Submit</Button>   
