@@ -68,12 +68,12 @@ render(){
             <div className='login'>
             <Form>
                 <Form.Group controlId='formBasicEmail'>
-                    {/* <Form.Label>Email address</Form.Label> */}
+                    <Form.Label>Email address</Form.Label>
                     <Form.Control type='email' placeholder='Enter email' id='inputEmail'/>
                 </Form.Group>
 
                 <Form.Group controlId='formBasicPassword'>
-                    {/* <Form.Label>Password</Form.Label> */}
+                    <Form.Label>Password</Form.Label>
                     <Form.Control type='password' placeholder='Password' id='inputPassword'/>
                 </Form.Group>
                 <br />
