@@ -15,28 +15,28 @@ export default class Routes extends Component {
     render() {
         console.log(sessionStorage.getItem('selectedChapterNo'));
         console.log(sessionStorage.getItem('loggedInUser')); 
+        let loggedUser = sessionStorage.getItem('loggedInUser');
         return (
             
         <Switch>
-                 <Route path='/' exact component={Home} />
+                 <Route path='/' exact component={ Home } />
 
-                 <Route path='/home' exact component={Home} />
+                 <Route path='/home' exact component={ Home } />
 
-                 <Route path='/book/bg' exact component={SriBhagavadGita} />
+                 <Route path='/book/bg' exact component={ SriBhagavadGita } />
 
-                 <Route path='/chapter' component={Chapter} />
+                 <Route path='/chapter' component={ Chapter } />
                 
-                 <Route path='/login' exact component={Login} /> 
+                 {/* <Route path='/login' exact component={ Login } />  */}
+                 <Route path='/login' exact component={() => (<Login loggedIn={loggedUser} />)} />
 
-                 <Route path='/about' exact component={About} /> 
+                 <Route path='/about' exact component={ About } /> 
 
                  <Route path='/register' component = { Register } />
 
                  <Route component={Error} />
 
-                {/* <Route path='/register' component={Register} />
-
-                <Route path='/profile' component={ProfilePage} /> */} 
+                {/* <Route path='/profile' component={ProfilePage} /> */} 
                         
         </Switch>           
           
