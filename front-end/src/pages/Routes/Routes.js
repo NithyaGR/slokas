@@ -33,7 +33,7 @@ export default class Routes extends Component {
 
                  <Route path='/register' component = { Register } />
 
-                 <Route component={Error} />
+                 <Route component={ Error } />
                         
         </Switch>           
           
