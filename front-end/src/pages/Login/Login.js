@@ -3,6 +3,7 @@ import Container from "react-bootstrap/Container";
 import './Login.css';
 import DataService from '../../api/DataService';
 import { Form, Button } from 'react-bootstrap';
+import { browserHistory } from 'history';
 
 
 
@@ -51,7 +52,8 @@ class Login extends Component {
                 localStorage.setItem('loggedUser', this.state.user.firstName);
                 console.log('Login successful');
                 alert("Login Successful");
-                this.props.history.push('/');                 
+                this.props.history.push('/');  
+                this.props.dispatch(push('/'));               
                 }
                 else {
                   alert('Wrong credentials!');
