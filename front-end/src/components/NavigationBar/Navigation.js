@@ -10,7 +10,8 @@ class Navigation extends Component {
     }
     
     componentWillMount(){
-        if(sessionStorage.getItem('loggedInUser') != null ){
+        console.log('inside component will mount of navigation.js');
+        if(sessionStorage.getItem('loggedInUser') !== null ){
             this.setState({isLoggedIn: true}); 
         } 
         else{

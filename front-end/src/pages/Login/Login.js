@@ -45,6 +45,7 @@ class Login extends Component {
         setTimeout(() => {
             console.log(this.state.user.email);
             console.log(this.state.user.userPassword);
+            console.log(this.props);
             if(this.state.user.email === userEmail && this.state.user.userPassword === userPassword){
                 sessionStorage.setItem('loggedInUser', this.state.user.firstName);  
                 localStorage.setItem('loggedUser', this.state.user.firstName);
