@@ -15,7 +15,7 @@ export default class Routes extends Component {
     render() {
         console.log(sessionStorage.getItem('selectedChapterNo'));
         console.log(sessionStorage.getItem('loggedInUser')); 
-        let loggedUser = localStorage.getItem('loggedInUser');
+        // let loggedUser = localStorage.getItem('loggedInUser');
         return (
             
         <Switch>
@@ -27,16 +27,13 @@ export default class Routes extends Component {
 
                  <Route path='/chapter' component={ Chapter } />
                 
-                 {/* <Route path='/login' exact component={ Login } />  */}
-                 <Route path='/login' exact component={() => (<Login loggedIn={loggedUser} />)} />
-
+                 <Route path='/login' exact component={ Login } /> 
+                 
                  <Route path='/about' exact component={ About } /> 
 
                  <Route path='/register' component = { Register } />
 
                  <Route component={Error} />
-
-                {/* <Route path='/profile' component={ProfilePage} /> */} 
                         
         </Switch>           
           

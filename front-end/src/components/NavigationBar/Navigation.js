@@ -5,6 +5,10 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 
 class Navigation extends Component {
+    state = {
+        isLoggedIn : false
+    }
+    
     handleClick = (e) =>{
         sessionStorage.removeItem('loggedInUser');
         console.log(sessionStorage.getItem('loggedInUser'));
@@ -14,9 +18,10 @@ class Navigation extends Component {
     render(){
          console.log(sessionStorage.getItem('loggedInUser'));  
          console.log(localStorage.getItem('loggedUser'));
+         //const [loggedIn, setLoggedIn] = useState(localStorage.getItem('loggedUser'));
         return(
             <div>
-                <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+                <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" >
                 <Navbar.Brand href="/home">Sri Krishna Asram</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse className="justify-content-end" id="responsive-navbar-nav">

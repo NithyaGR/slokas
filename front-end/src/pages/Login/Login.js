@@ -50,8 +50,7 @@ class Login extends Component {
                 localStorage.setItem('loggedUser', this.state.user.firstName);
                 console.log('Login successful');
                 alert("Login Successful");
-                this.props.history.push('/home');
-                  
+                this.props.history.push('/');                 
                 }
                 else {
                   alert('Wrong credentials!');
