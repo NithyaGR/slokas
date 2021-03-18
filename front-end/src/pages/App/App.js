@@ -4,10 +4,22 @@ import Routes from '../Routes/Routes';
 import './App.css';
 
 class App extends Component {
+
+  state = {
+    isLoggedIn : false
+}
+  logout = () => {
+    sessionStorage.removeItem('loggedInUser');
+    console.log(sessionStorage.getItem('loggedInUser'));
+    localStorage.removeItem('loggedUser');
+    this.setState({isLoggedIn : false});
+    alert('You are logged out successfully! Thank you for visiting us!');
+  }
   render(){
+ 
   return (
     <div className="App">
-      <NavigationBar />
+      <NavigationBar userAuth={this.state.isLoggedIn} logout={this.logout}/>
       <Routes />
     </div>
   );
@@ -15,3 +27,15 @@ class App extends Component {
 }
 
 export default App;
+/*
+componentDidMount(){
+        console.log('inside component will mount of navigation.js');
+        if(sessionStorage.getItem('loggedInUser') !== null ){
+            this.setState({isLoggedIn: true}); 
+        } 
+        else{
+            this.setState({isLoggedIn: false}); 
+        }
+    }
+*/
+
