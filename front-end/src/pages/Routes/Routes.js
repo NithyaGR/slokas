@@ -27,7 +27,7 @@ export default class Routes extends Component {
 
                  <Route path='/chapter' component={ Chapter } />
                 
-                 <Route path='/login' exact component={ Login } /> 
+                 <Route path='/login' exact> <Login login={this.props.login} /> </Route>
                  
                  <Route path='/about' exact component={ About } /> 
 

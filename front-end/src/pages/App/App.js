@@ -15,12 +15,15 @@ class App extends Component {
     this.setState({isLoggedIn : false});
     alert('You are logged out successfully! Thank you for visiting us!');
   }
+  login = () => {
+    this.setState({isLoggedIn : true});
+  }
   render(){
  
   return (
     <div className="App">
       <NavigationBar userAuth={this.state.isLoggedIn} logout={this.logout}/>
-      <Routes />
+      <Routes login = {this.login}/>
     </div>
   );
 }

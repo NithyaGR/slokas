@@ -37,7 +37,6 @@ class Login extends Component {
                 this.setState({user : response.data});
                 console.log(this.state.user);
             }
-
         )
         .catch( error => {
             console.log(error);
@@ -50,6 +49,7 @@ class Login extends Component {
             if(this.state.user.email === userEmail && this.state.user.userPassword === userPassword){
                 sessionStorage.setItem('loggedInUser', this.state.user.firstName);  
                 console.log('Login successful');
+                this.props.login();
                 alert("Login Successful");
                 this.props.history.push('/');                
                 }
@@ -57,7 +57,6 @@ class Login extends Component {
                   alert('Wrong credentials!');
                }  
         }, 5000);
-
     }
     
 render(){
