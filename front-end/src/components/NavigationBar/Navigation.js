@@ -20,7 +20,7 @@ class Navigation extends Component {
                     <Nav.Link><NavLink to='/home'>Home</NavLink></Nav.Link>
                     <Nav.Link><NavLink to='/about'>About</NavLink></Nav.Link>
                     <Nav.Link><NavLink to='/register'>Register</NavLink></Nav.Link>
-                    { this.props.isLoggedIn  
+                    { this.props.userAuth 
                     ?  <Nav.Link><NavLink to='/home' onClick={this.handleClick}>Logout</NavLink></Nav.Link> 
                     :  <Nav.Link><NavLink to='/login'>Login</NavLink></Nav.Link> }
                 </Navbar.Collapse>
