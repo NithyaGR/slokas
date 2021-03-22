@@ -4,6 +4,7 @@ import './Login.css';
 import DataService from '../../api/DataService';
 import { Form, Button } from 'react-bootstrap';
 import { browserHistory } from 'history';
+import { withRouter } from 'react-router-dom'
 
 
 
@@ -88,7 +89,7 @@ render(){
     )
 }
 }
-export default Login;
+export default withRouter(Login);
   
 /*
 <Form>
