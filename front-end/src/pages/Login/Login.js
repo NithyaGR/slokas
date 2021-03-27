@@ -84,8 +84,6 @@ render(){
             
         </div>
         </Container>
-  
-    
     )
 }
 }

@@ -35,7 +35,7 @@
     padding-right: 20px;
 
 }   
-.circle1, .circle2 {
+/* .circle1, .circle2 {
     background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.8), rgba(255,255,255,0.3));
     height: 200px;
     width: 200px;
@@ -48,10 +48,9 @@
 .circle1 {
     top: 12%;
     right: 18%;
-    /* background-color: red; */
 }
 
 .circle2 {
     bottom: 5%;
     left: 20%;
-}
+} */
