@@ -21,7 +21,7 @@ class Login extends Component {
     handleChange = (e) =>{
         //to bind the text which we entered and to store in that corresponding ids  
         this.setState({ [e.target.id]: e.target.value });
-        console.log('onChange');
+        //console.log('onChange');
     }
     handleClick=(e) => {
         e.preventDefault();
@@ -33,23 +33,23 @@ class Login extends Component {
         DataService.executeUserServiceGetUser(userEmail)
         .then(
             response => {
-                console.log('testing');
-                console.log(response.data);
+                //console.log('testing');
+                //console.log(response.data);
                 this.setState({user : response.data});
-                console.log(this.state.user);
+                //console.log(this.state.user);
             }
         )
         .catch( error => {
-            console.log(error);
+            //console.log(error);
             alert('No such user matching your credentials!');
         })
         setTimeout(() => {
-            console.log(this.state.user.email);
-            console.log(this.state.user.userPassword);
-            console.log(this.props);
+            //console.log(this.state.user.email);
+            //console.log(this.state.user.userPassword);
+            //console.log(this.props);
             if(this.state.user.email === userEmail && this.state.user.userPassword === userPassword){
                 sessionStorage.setItem('loggedInUser', this.state.user.firstName);  
-                console.log('Login successful');
+                //console.log('Login successful');
                 this.props.login();
                 alert("Login Successful");
                 this.props.history.push('/');                

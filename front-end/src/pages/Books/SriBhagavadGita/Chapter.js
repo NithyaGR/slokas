@@ -12,19 +12,19 @@ class Chapter extends Component {
         displayText : 1
     }
     componentDidMount(){
-        console.log('componentDidMount - to get all the verses in the selected chapter');
+        //console.log('componentDidMount - to get all the verses in the selected chapter');
         let bookNo = sessionStorage.getItem('selectedBook');
         let chapterNo = sessionStorage.getItem('selectedChapterNo');
         DataService.executeBookServiceTexts(bookNo, chapterNo)
           .then(
               response => {
-                  console.log(response.data);
+                  //console.log(response.data);
                   this.setState({texts : response.data});
               }
           )       
     }
     handleClick = (e) => {
-        console.log(e.target.id);
+        //console.log(e.target.id);
         if(e.target.id === 'next'){
             let nextNo = Number(this.state.displayText);
             nextNo ++;

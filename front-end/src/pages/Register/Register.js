@@ -20,11 +20,11 @@ class Register extends Component {
     handleChange = (e) =>{
         //to bind the text which we entered and to store in that corresponding ids  
         this.setState({ [e.target.id]: e.target.value });
-        console.log('onChange');
+        //console.log('onChange');
     }
     handleClick=(e) => {
         e.preventDefault();
-        console.log('inside handle submit');
+        //console.log('inside handle submit');
         if(this.validate()){
         const newUser = {
             firstName: this.state.firstName,
@@ -41,8 +41,8 @@ class Register extends Component {
         DataService.executeUserServicePost(newUser)
         .then(
             response => {
-                console.log('testing');
-                console.log(response.status);
+                //console.log('testing');
+                //console.log(response.status);
                 if(response.status === 200){
                     alert('Registration Successful!');
                     this.props.history.push('/login');
@@ -54,7 +54,7 @@ class Register extends Component {
 
         )
         .catch( error => {
-            console.log(error);
+            //console.log(error);
             alert('Connection Error - Try again');
         })
     }
