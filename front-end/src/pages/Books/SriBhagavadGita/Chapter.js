@@ -40,7 +40,7 @@ class Chapter extends Component {
             let previousNo = Number(this.state.displayText);
             previousNo --;
             if(previousNo < 1){
-                previousNo = 20;
+                previousNo = this.state.texts.length;
             }
             this.setState(
                 {
