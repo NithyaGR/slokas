@@ -21,8 +21,8 @@
     margin-top: -75px;
     margin-left: -100px;
     background: white;
-    min-height: 65vh;
-    width: 40%;
+    min-height: 75vh;
+    width: 50%;
     background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255,255,255,0.3));
     border-radius: 20px;
     z-index: 2;
