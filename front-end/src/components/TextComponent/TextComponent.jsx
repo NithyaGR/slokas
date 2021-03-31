@@ -19,7 +19,7 @@ class TextComponent extends Component {
             </div>
             <br/>
             <div className='english'>
-            <pre>{this.props.display.textEnglish}</pre>
+            <pre style={{fontSize: 14}}>{this.props.display.textEnglish}</pre>
             {/* <h4>{this.props.display.textEnglish}</h4> */}
             </div>
             <div className='translation'>
