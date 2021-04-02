@@ -19,6 +19,7 @@ class TextComponent extends Component {
             </div>
             <br/>
             <div className='english'>
+                {/* for inline styles - 2 curly braces */}
             <pre style={{fontSize: 16}}>{this.props.display.textEnglish}</pre>
             {/* <h4>{this.props.display.textEnglish}</h4> */}
             </div>

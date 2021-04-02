@@ -30,15 +30,3 @@ class App extends Component {
 }
 
 export default App;
-/*
-componentDidMount(){
-        console.log('inside component will mount of navigation.js');
-        if(sessionStorage.getItem('loggedInUser') !== null ){
-            this.setState({isLoggedIn: true}); 
-        } 
-        else{
-            this.setState({isLoggedIn: false}); 
-        }
-    }
-*/
-
