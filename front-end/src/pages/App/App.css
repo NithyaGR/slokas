@@ -17,14 +17,18 @@ body{
   display: flex;
   align-items: center;
   justify-content: center; */
+  html{
+    background: red;
+  }
 .App {
-  /* A5EAFF - Sri Krishna blue */
+  
+}
+/* A5EAFF - Sri Krishna blue */
   /* background-color: #A5EAFF; */
   /* background: linear-gradient(to right top,  #A5EAFF, #6cdbeb);
   text-align: center;
   height: 100%;
   width: 100%; */
-}
 
 
 
