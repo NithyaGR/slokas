@@ -18,12 +18,12 @@ class Navigation extends Component {
                 <Navbar.Brand href='/home'>Sri Krishna Asram</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse className="justify-content-end" id="responsive-navbar-nav">
-                    <NavItem><NavLink to='/home'>Home</NavLink></NavItem>
-                    <NavItem><NavLink to='/about'>About</NavLink></NavItem>
-                    <NavItem><NavLink to='/register'>Register</NavLink></NavItem>
+                    <Nav.Link><NavLink to='/home' className="navlinks">Home</NavLink></Nav.Link>
+                    <Nav.Link><NavLink to='/about' className="navlinks">About</NavLink></Nav.Link>
+                    <Nav.Link><NavLink to='/register' className="navlinks">Register</NavLink></Nav.Link>
                     { this.props.userAuth 
-                    ?  <NavItem><NavLink to='/home' onClick={this.handleClick}>Logout</NavLink></NavItem> 
-                    :  <NavItem><NavLink to='/login'>Login</NavLink></NavItem> }
+                    ?  <Nav.Link><NavLink to='/home' onClick={this.handleClick} className="navlinks">Logout</NavLink></Nav.Link> 
+                    :  <Nav.Link><NavLink to='/login' className="navlinks">Login</NavLink></Nav.Link> }
                 </Navbar.Collapse>
                 </Navbar>
             </div>
