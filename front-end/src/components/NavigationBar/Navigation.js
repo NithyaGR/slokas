@@ -18,12 +18,12 @@ class Navigation extends Component {
                 <Navbar.Brand href='/home'>Sri Krishna Asram</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse className="justify-content-end" id="responsive-navbar-nav">
-                    <Nav.Link><NavLink to='/home' className="navlinks">Home</NavLink></Nav.Link>
-                    <Nav.Link><NavLink to='/about' className="navlinks">About</NavLink></Nav.Link>
-                    <Nav.Link><NavLink to='/register' className="navlinks">Register</NavLink></Nav.Link>
+                    <Nav.Link><NavLink to='/home' className="navlinks" style={{ textDecoration: 'none', color: 'white' }}>Home</NavLink></Nav.Link>
+                    <Nav.Link><NavLink to='/about' className="navlinks" style={{ textDecoration: 'none', color: 'white' }}>About</NavLink></Nav.Link>
+                    <Nav.Link><NavLink to='/register' className="navlinks" style={{ textDecoration: 'none', color: 'white' }}>Register</NavLink></Nav.Link>
                     { this.props.userAuth 
-                    ?  <Nav.Link><NavLink to='/home' onClick={this.handleClick} className="navlinks">Logout</NavLink></Nav.Link> 
-                    :  <Nav.Link><NavLink to='/login' className="navlinks">Login</NavLink></Nav.Link> }
+                    ?  <Nav.Link><NavLink to='/home' onClick={this.handleClick} className="navlinks"style={{ textDecoration: 'none', color: 'white' }}>Logout</NavLink></Nav.Link> 
+                    :  <Nav.Link><NavLink to='/login' className="navlinks" style={{ textDecoration: 'none', color: 'white' }}>Login</NavLink></Nav.Link> }
                 </Navbar.Collapse>
                 </Navbar>
             </div>
