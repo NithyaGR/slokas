@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
+import { NavItem } from "react-bootstrap";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 
@@ -17,12 +18,12 @@ class Navigation extends Component {
                 <Navbar.Brand href='/home'>Sri Krishna Asram</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse className="justify-content-end" id="responsive-navbar-nav">
-                    <Nav.Link><NavLink to='/home'>Home</NavLink></Nav.Link>
-                    <Nav.Link><NavLink to='/about'>About</NavLink></Nav.Link>
-                    <Nav.Link><NavLink to='/register'>Register</NavLink></Nav.Link>
+                    <NavItem><NavLink to='/home'>Home</NavLink></NavItem>
+                    <NavItem><NavLink to='/about'>About</NavLink></NavItem>
+                    <NavItem><NavLink to='/register'>Register</NavLink></NavItem>
                     { this.props.userAuth 
-                    ?  <Nav.Link><NavLink to='/home' onClick={this.handleClick}>Logout</NavLink></Nav.Link> 
-                    :  <Nav.Link><NavLink to='/login'>Login</NavLink></Nav.Link> }
+                    ?  <NavItem><NavLink to='/home' onClick={this.handleClick}>Logout</NavLink></NavItem> 
+                    :  <NavItem><NavLink to='/login'>Login</NavLink></NavItem> }
                 </Navbar.Collapse>
                 </Navbar>
             </div>
