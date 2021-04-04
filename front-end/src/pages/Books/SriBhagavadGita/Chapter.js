@@ -4,6 +4,7 @@ import { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import DataService from '../../../api/DataService';
 import TextComponent from '../../../components/TextComponent/TextComponent';
+import { Button } from 'react-bootstrap';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Container from 'react-bootstrap/Container';
 import styled from 'styled-components';

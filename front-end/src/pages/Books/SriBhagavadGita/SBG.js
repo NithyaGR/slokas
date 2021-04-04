@@ -36,7 +36,10 @@ class SBG extends Component {
     }
     render() {
         return(
-            <div>
+            <Wrapper>
+                <Jumbotron>
+                    <Container>
+            
                 <h3> Sri Bhagavad Gita</h3> 
                         <table className='table'>
                         <thead className='thead-dark'>
@@ -58,10 +61,17 @@ class SBG extends Component {
                         </tbody>
                         </table>
 
-            </div>
+            
+            </Container>
+            </Jumbotron>
+            </Wrapper>
         )
     }
 }
+const Wrapper = styled.div `
+.jumbotron{
+    text-align: center;
+}`;
 export default SBG;
 //chapter/{chapter.chapterNo}
 //{{pathname:'chapter/{chapter.chapterNo',state:{chapter:chapter.chapterNo}}}
