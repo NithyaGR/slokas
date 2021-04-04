@@ -1,8 +1,7 @@
 import { Component } from 'react';
 import NavigationBar from '../../components/NavigationBar/Navigation';
 import Routes from '../Routes/Routes';
-import Container from 'react-bootstrap/Container';
-import styled from 'styled-components';
+//import styled from 'styled-components';
 import './App.css';
 
 
@@ -24,33 +23,18 @@ class App extends Component {
   render(){
  
   return (
-    <Wrapper>
-      
-        <Container>
-        <div className="App">
+
+        <div>
           <NavigationBar userAuth={this.state.isLoggedIn} logout={this.logout}/>
           <Routes login = {this.login}/>
         </div>
-        </Container>
-    
-    </Wrapper>
   );
 }
 }
-const Wrapper = styled.div `
-body{
-  background: linear-gradient(to right top,  #A5EAFF, #65dfc9); 
-  text-align: center;
-  min-height: 100vh;
-  width: 100%;
-}
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-.jumbotron{
-    background: linear-gradient(to right top,  #A5EAFF, #65dfc9);
-    text-align: center;
-}`;
+// const Wrapper = styled.div `
+
+// .jumbotron{
+//     background: linear-gradient(to right top,  #A5EAFF, #65dfc9);
+//     text-align: center;
+// }`;
 export default App;
