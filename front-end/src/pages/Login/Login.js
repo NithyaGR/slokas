@@ -63,10 +63,10 @@ class Login extends Component {
     
 render(){
     return(
-        <Wrapper>
-            <h3>Login</h3>
+        <Wrapper>  
             <Jumbotron className='jumbotron'>
             <Container>
+            <h3>Login</h3>
             <Form className='login'>
                 <Form.Group controlId='formBasicEmail'>
                     <Form.Label>Email address</Form.Label>
@@ -102,6 +102,8 @@ const Wrapper = styled.div `
 .jumbotron{
     
     text-align: center;
+    height: 100%;
+    width: 100%;
 }`;
 export default withRouter(Login);
   
