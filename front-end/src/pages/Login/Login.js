@@ -91,14 +91,14 @@ render(){
 
 const Wrapper = styled.div `
 .login{
-    
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    //margin : auto;
+    margin : auto;
     text-align: center;
+    align-items: center;
     width: 400px;
 }
+@media screen and (min-width: 480px) {
+    .login: {width: auto; float: left;}
+  }
 .jumbotron{
     
     text-align: center;
