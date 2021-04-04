@@ -97,7 +97,7 @@ const Wrapper = styled.div `
     width: 400px;
 }
 @media screen and (min-width: 480px) {
-    .login: {width: auto; float: left;}
+    .login: {width: auto;}
   }
 .jumbotron{
     
