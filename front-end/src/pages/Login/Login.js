@@ -3,8 +3,11 @@ import Container from "react-bootstrap/Container";
 import './Login.css';
 import DataService from '../../api/DataService';
 import { Form, Button } from 'react-bootstrap';
-import { browserHistory } from 'history';
-import { withRouter } from 'react-router-dom'
+//import { browserHistory } from 'history';
+import { withRouter } from 'react-router-dom';
+import Jumbotron from 'react-bootstrap/Jumbotron';
+import Container from 'react-bootstrap/Container';
+import styled from 'styled-components';
 
 
 
@@ -62,7 +65,9 @@ class Login extends Component {
     
 render(){
     return(
-        <Container className='w-100 p-3'>
+        <Wrapper>
+        <Jumbotron>
+        <Container>
         <div>
             <h3>Login</h3>
             
@@ -84,48 +89,16 @@ render(){
             
         </div>
         </Container>
+        </Jumbotron>
+        </Wrapper>
     )
 }
 }
+
+const Wrapper = styled.div `
+.jumbotron{
+    background: linear-gradient(to right top,  #A5EAFF, #65dfc9);
+    text-align: center;
+}`;
 export default withRouter(Login);
   
-/*
-<Form>
-  <Form.Group controlId="formBasicEmail">
-    <Form.Label>Email address</Form.Label>
-    <Form.Control type="email" placeholder="Enter email" />
-    <Form.Text className="text-muted">
-      We'll never share your email with anyone else.
-    </Form.Text>
-  </Form.Group>
-
-  <Form.Group controlId="formBasicPassword">
-    <Form.Label>Password</Form.Label>
-    <Form.Control type="password" placeholder="Password" />
-  </Form.Group>
-  <Form.Group controlId="formBasicCheckbox">
-    <Form.Check type="checkbox" label="Check me out" />
-  </Form.Group>
-  <Button variant="primary" type="submit">
-    Submit
-  </Button>
-</Form>
-*/
-/*
-<div className='loginForm'>
-                <br />
-            <form>
-                <div className='form-group'>
-                     <input type='email' className='form-control' id='inputEmail' 
-                      placeholder='Provide email' onChange={this.handleChange}/>
-                 </div>
-                 <br />
-                 <div className='form-group'>
-                <input type='password' className='form-control' id='inputPassword' 
-                placeholder='Password'  onChange={this.handleChange}/>
-                 </div>
-                 <br />
-                 <button type='submit' className='btn btn-primary' onClick={this.handleClick}>Submit</button>   
-            </form>
-            </div>   
-*/

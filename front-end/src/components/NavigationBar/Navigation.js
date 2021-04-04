@@ -16,8 +16,6 @@ class Navigation extends Component {
          console.log(sessionStorage.getItem('loggedInUser'));  
         return(
             <Wrapper>
-                <Jumbotron>
-                <Container>
                 <div>
                     <Navbar collapseOnSelect expand='lg' bg='dark' variant='dark' >
                     <Navbar.Brand href='/home'>  Sri Krishna Asram</Navbar.Brand>
@@ -32,8 +30,6 @@ class Navigation extends Component {
                     </Navbar.Collapse>
                     </Navbar>
                 </div>
-                </Container>
-                </Jumbotron>
             </Wrapper>
         );
 }

@@ -45,7 +45,11 @@ body{
   min-height: 100vh;
   width: 100%;
 }
-
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .jumbotron{
     background: linear-gradient(to right top,  #A5EAFF, #65dfc9);
     text-align: center;
