@@ -70,7 +70,7 @@ render(){
         <div>
             <h3>Login</h3>
             
-            <Form>
+            <Form className='login'>
                 <Form.Group controlId='formBasicEmail'>
                     <Form.Label>Email address</Form.Label>
                     <Form.Control type='email' placeholder='Enter email' id='inputEmail'/>
@@ -95,8 +95,11 @@ render(){
 }
 
 const Wrapper = styled.div `
+.login{
+    width: 400px;
+}
 .jumbotron{
-    background: linear-gradient(to right top,  #A5EAFF, #65dfc9);
+    
     text-align: center;
 }`;
 export default withRouter(Login);
