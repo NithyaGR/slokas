@@ -91,9 +91,11 @@ render(){
 
 const Wrapper = styled.div `
 .login{
-    // margin-left: 50%;
-    // margin-top : 50%;
-    margin : auto;
+    
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    //margin : auto;
     text-align: center;
     width: 400px;
 }
