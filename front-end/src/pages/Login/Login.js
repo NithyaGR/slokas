@@ -64,11 +64,9 @@ class Login extends Component {
 render(){
     return(
         <Wrapper>
-        <Jumbotron>
-        <Container>
-        <div>
             <h3>Login</h3>
-            
+            <Jumbotron className='jumbotron'>
+            <Container>
             <Form className='login'>
                 <Form.Group controlId='formBasicEmail'>
                     <Form.Label>Email address</Form.Label>
@@ -84,8 +82,6 @@ render(){
                     Submit
                 </Button>
             </Form>
-            
-        </div>
         </Container>
         </Jumbotron>
         </Wrapper>

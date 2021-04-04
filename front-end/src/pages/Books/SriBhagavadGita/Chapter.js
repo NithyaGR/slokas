@@ -4,6 +4,9 @@ import { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import DataService from '../../../api/DataService';
 import TextComponent from '../../../components/TextComponent/TextComponent';
+import Jumbotron from 'react-bootstrap/Jumbotron';
+import Container from 'react-bootstrap/Container';
+import styled from 'styled-components';
 import './Chapter.css';
 
 class Chapter extends Component {
@@ -51,27 +54,45 @@ class Chapter extends Component {
     render() {
 
         return(
+            <Wrapper>
             <div className='texts'>
             <h4>{sessionStorage.getItem('selectedChapterNo')} : {sessionStorage.getItem('selectedChapterName')}</h4>
                 <div className='main'>                   
                 <div className='dynamicButtons'>  
-                <button type='button' className='btn btn-info' id='previous' onClick={this.handleClick}>&laquo; Previous</button>
+                <Button variant='primary' type='button' id='previous' onClick={this.handleClick}>
+                &laquo; Previous
+                </Button>
                     <span className='badge badge-info' id='textNo'>{this.state.displayText}</span>
-                <button type='button' className='btn btn-info' id='next' onClick={this.handleClick}>&raquo; Next</button>        
-                </div>    
-                <div className='glass'>
+                <Button variant='primary' type='button' id='next' onClick={this.handleClick}>
+                &raquo; Next
+                </Button>        
+                </div> 
+                <Jumbotron className='.jumbotron'>  
+                    <Container className='glass'>
                     {this.state.texts.map((textData) => (
                         textData.slokaNo === this.state.displayText
                         ? <TextComponent display={textData} key={textData.slokaNo}/>
                     : '')
                     )}
-                    
+                    </Container>
+                </Jumbotron> 
                 </div>
-                </div>
-                {/* <div className="circle1"> </div>
-                <div className="circle2"> </div>*/}
             </div>
+            </Wrapper>
         )
     }
 }
+const Wrapper = styled.div `
+.jumbotron{
+    text-align: center;
+}`;
 export default withRouter(Chapter);
+
+/*
+<Button variant='primary' type='submit' onClick={this.handleClick}>
+                    Submit
+                </Button>
+
+<button type='button' className='btn btn-info' id='previous' onClick={this.handleClick}>&laquo; Previous</button>
+
+*/
