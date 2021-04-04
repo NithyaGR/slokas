@@ -1,7 +1,6 @@
 import { Component } from 'react';
 import NavigationBar from '../../components/NavigationBar/Navigation';
 import Routes from '../Routes/Routes';
-import Jumbotron from 'react-bootstrap/Jumbotron';
 import Container from 'react-bootstrap/Container';
 import styled from 'styled-components';
 import './App.css';
@@ -26,14 +25,14 @@ class App extends Component {
  
   return (
     <Wrapper>
-      <Jumbotron>
+      
         <Container>
         <div className="App">
           <NavigationBar userAuth={this.state.isLoggedIn} logout={this.logout}/>
           <Routes login = {this.login}/>
         </div>
         </Container>
-    </Jumbotron>
+    
     </Wrapper>
   );
 }
