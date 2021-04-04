@@ -3,6 +3,7 @@ import './Register.css';
 import DataService from '../../api/DataService';
 import { Form, Button } from 'react-bootstrap';
 import Jumbotron from 'react-bootstrap/Jumbotron';
+import Container from "react-bootstrap/Container";
 import styled from 'styled-components';
 
 
