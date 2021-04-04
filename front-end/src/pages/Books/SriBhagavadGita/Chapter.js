@@ -67,7 +67,7 @@ class Chapter extends Component {
                 &raquo; Next
                 </Button>        
                 </div> 
-                <Jumbotron className='.jumbotron'>  
+                <Jumbotron className='jumbotron'>  
                     <Container className='glass'>
                     {this.state.texts.map((textData) => (
                         textData.slokaNo === this.state.displayText
