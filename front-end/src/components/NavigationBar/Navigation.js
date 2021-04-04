@@ -20,7 +20,7 @@ class Navigation extends Component {
                 <Container>
                 <div>
                     <Navbar collapseOnSelect expand='lg' bg='dark' variant='dark' >
-                    <Navbar.Brand href='/home'>Sri Krishna Asram</Navbar.Brand>
+                    <Navbar.Brand href='/home'>  Sri Krishna Asram</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse className="justify-content-end" id="responsive-navbar-nav">
                         <Nav.Link><NavLink to='/home' className="navlinks" >Home</NavLink></Nav.Link>
