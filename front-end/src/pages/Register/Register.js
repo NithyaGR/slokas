@@ -143,11 +143,11 @@ render(){
 }
 }
 const Wrapper = styled.div `
-.login{
+.registerForm {
     text-align: center;
     width: 400px;
 }
-.jumbotron{
+.jumbotron {
     
     text-align: center;
 }`;
