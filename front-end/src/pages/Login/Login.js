@@ -96,14 +96,11 @@ const Wrapper = styled.div `
     align-items: center;
     width: 400px;
 }
-@media screen and (min-width: 480px) {
+@media only screen and (min-width: 480px) {
     .login: {width: auto;}
   }
-.jumbotron{
-    
+.jumbotron{ 
     text-align: center;
-    height: 100%;
-    width: 100%;
 }`;
 export default withRouter(Login);
   

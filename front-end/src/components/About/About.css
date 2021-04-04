@@ -13,15 +13,29 @@
     height: 100vh;
   
     /* Center and scale the image nicely */
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
+    /* Set a background color that will be displayed
+    while the background image is loading */
+    background-color: #464646;
   }
   @media only screen and (max-width: 480px) {
     img {
-      width: 100%;
+      width: 50%;
+    }
+    .about{
+      background-color: #464646;
     }
   }
+  @media only screen and (max-width: 767px) {
+    body {
+    /* The file size of this background image is 93% smaller
+    to improve page load speed on mobile internet connections */
+    background-image: url(images/background-photo-mobile-devices.jpg);
+    }
+    }
   .aboutText {
         padding-top: 10px;
         padding-right: 10px;
