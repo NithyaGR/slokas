@@ -19,7 +19,7 @@
     background-attachment: fixed;
     /* Set a background color that will be displayed
     while the background image is loading */
-    background-color: #464646;
+    /* background-color: #464646; */
   }
   @media only screen and (min-width: 480px) {
     img {
