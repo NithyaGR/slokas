@@ -68,7 +68,6 @@ class Home extends Component {
 }
 const Wrapper = styled.div `
 .jumbotron{
-    background: linear-gradient(to right top,  #A5EAFF, #65dfc9);
     text-align: center;
 }`;
 

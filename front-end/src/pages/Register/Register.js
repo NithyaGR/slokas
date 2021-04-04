@@ -136,29 +136,3 @@ render(){
 }
 }
 export default Register;
-/*
-<form>
-                <div className='form-group'>
-                     <input type='first Name' className='form-control' id='firstName' 
-                      placeholder='Enter Your First Name' value = {this.state.firstName} onChange={this.handleChange}/>
-                 </div>
-                 <br />
-                 <div className='form-group'>
-                <input type='lastName' className='form-control' id='lastName' 
-                placeholder='Enter Your Last Name' value = {this.state.lastName} onChange={this.handleChange}/>
-                 </div>
-                 <br />
-                 <div className='form-group'>
-                <input type='email' className='form-control' id='email' 
-                placeholder='Enter Your Email' value = {this.state.email} onChange={this.handleChange}/>
-                 </div>
-                 <br />
-                 <div className='form-group'>
-                <input type='password' className='form-control' id='userPassword' 
-                placeholder='Password' value = {this.state.password} onChange={this.handleChange}/>
-                 <br />
-                 </div>
-                 <button type='submit' className='btn btn-primary' onClick={this.handleClick}>Submit</button>   
-            </form>
-*/
-  
