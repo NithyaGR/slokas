@@ -97,7 +97,7 @@ const Wrapper = styled.div `
     width: 400px;
 }
 @media only screen and (min-width: 480px) {
-    .login: {width: auto;}
+    .login: {width: 200px;}
   }
 .jumbotron{ 
     text-align: center;
