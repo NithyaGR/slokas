@@ -1,4 +1,6 @@
 import { Component }from 'react';
+import Jumbotron from 'react-bootstrap/Jumbotron';
+import Container from 'react-bootstrap/Container';
 import DataService from "../../api/DataService";
 
 
@@ -33,6 +35,9 @@ class Home extends Component {
     render(){
         let count = 1;
         return(
+            <Wrapper>
+            <Jumbotron>
+            <Container>
             <div>
                 <h3>Books!</h3>
                 <table className='table'>
@@ -54,7 +59,17 @@ class Home extends Component {
             </tbody>
             </table>
             </div>
+            </Container>
+            </Jumbotron>
+            </Wrapper>
         )
     }
 }
+const Wrapper = styled.div `
+.jumbotron{
+    background: #b1f522;
+    // #A5EAFF
+    text-align: center;
+}`;
+
 export default Home;
