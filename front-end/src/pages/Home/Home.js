@@ -2,6 +2,7 @@ import { Component }from 'react';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Container from 'react-bootstrap/Container';
 import DataService from "../../api/DataService";
+import styled from 'styled-components';
 
 
 class Home extends Component {
