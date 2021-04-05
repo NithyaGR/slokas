@@ -65,7 +65,7 @@ h4, h5 {
     }
   }
 .jumbotron {
-    //overflow-x: hidden;
+    width: 100%; 
     
 }`;
 export default TextComponent;

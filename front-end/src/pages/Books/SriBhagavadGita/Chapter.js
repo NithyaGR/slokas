@@ -68,15 +68,15 @@ class Chapter extends Component {
                 &raquo; Next
                 </Button>        
                 </div> 
-                {/* <Jumbotron className='jumbotron'>  
-                    <Container className='glass'> */}
+                <Jumbotron>  
+                    <Container className='glass'>
                     {this.state.texts.map((textData) => (
                         textData.slokaNo === this.state.displayText
                         ? <TextComponent display={textData} key={textData.slokaNo}/>
                     : '')
                     )}
-                    {/* </Container>
-                </Jumbotron>  */}
+                    </Container>
+                </Jumbotron> 
                 </div>
             </div>
             </Wrapper>
@@ -85,20 +85,9 @@ class Chapter extends Component {
 }
 const Wrapper = styled.div `
     min-height: calc(91vh - 55px);
-    // max-width: 100%;
-    // overflow-x: hidden;
 
-.jumbotron{
-    text-align: center;
-    //background-color: white;
+    .jumbotron {
+        text-align: center; 
 }`;
 export default withRouter(Chapter);
 
-/*
-<Button variant='primary' type='submit' onClick={this.handleClick}>
-                    Submit
-                </Button>
-
-<button type='button' className='btn btn-info' id='previous' onClick={this.handleClick}>&laquo; Previous</button>
-
-*/
