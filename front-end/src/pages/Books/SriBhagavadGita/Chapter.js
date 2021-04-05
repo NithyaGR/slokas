@@ -90,7 +90,7 @@ const Wrapper = styled.div `
 
 .jumbotron{
     text-align: center;
-    background-color: white;
+    //background-color: white;
 }`;
 export default withRouter(Chapter);
 
