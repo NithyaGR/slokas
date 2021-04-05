@@ -11,7 +11,7 @@ class TextComponent extends Component {
         // console.log(this.props.display);
         return(
             <Wrapper>
-               <Jumbotron className='jumbotron'>
+               <Jumbotron>
                     <Container>
                
                     <div className='text'>
@@ -50,6 +50,10 @@ h4, h5 {
     text-align : center;
 }
 @media only screen and (min-width: 480px) {
+    .jumbotron {
+        margin-left : 5px;
+        margin-right : 5px;
+    }
     .sanskrit {
         font-size: 12px;
     }
