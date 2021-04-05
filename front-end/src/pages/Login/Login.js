@@ -90,6 +90,8 @@ render(){
 }
 
 const Wrapper = styled.div `
+
+min-height: calc(91vh - 55px);
 .login{
     margin : auto;
     text-align: center;
@@ -97,9 +99,11 @@ const Wrapper = styled.div `
     width: 400px;
 }
 @media only screen and (min-width: 480px) {
-    .login: {width: 200px;}
+    .login {
+        width: 200px;
+    }
   }
-.jumbotron{ 
+.jumbotron { 
     text-align: center;
 }`;
 export default withRouter(Login);
