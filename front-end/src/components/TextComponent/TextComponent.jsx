@@ -11,7 +11,7 @@ class TextComponent extends Component {
         // console.log(this.props.display);
         return(
             <Wrapper>
-               <Jumbotron>
+               <Jumbotron className='jumbotron'>
                     <Container>
                
                     <div className='text'>
