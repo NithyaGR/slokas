@@ -100,6 +100,7 @@ min-height: calc(91vh - 55px);
 }
 @media only screen and (min-width: 480px) {
     .login {
+        margin : auto;
         width: 200px;
     }
   }

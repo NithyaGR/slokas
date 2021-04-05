@@ -42,6 +42,7 @@ class TextComponent extends Component {
     }
 }
 const Wrapper = styled.div `
+min-height: calc(91vh - 55px);
 .sanskrit {
     font-size: 20px;
 }
@@ -49,9 +50,9 @@ h4, h5 {
     text-align : center;
 }
 .jumbotron {
-    background-color : white;
-    max-width: 100%;
-    overflow-x: hidden;
+    //background-color : white;
+    //max-width: 100%;
+    //overflow-x: hidden;
     
 }`;
 export default TextComponent;
