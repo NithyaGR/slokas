@@ -143,6 +143,7 @@ render(){
 }
 }
 const Wrapper = styled.div `
+min-height: calc(91vh - 55px);
 .registerForm {
     text-align: center;
     width: 400px;
