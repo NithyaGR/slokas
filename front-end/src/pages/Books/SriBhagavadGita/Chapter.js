@@ -84,6 +84,10 @@ class Chapter extends Component {
     }
 }
 const Wrapper = styled.div `
+    
+    max-width: 100%;
+    overflow-x: hidden;
+
 .jumbotron{
     text-align: center;
     background-color: white;

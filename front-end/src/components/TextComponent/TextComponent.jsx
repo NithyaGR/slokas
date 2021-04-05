@@ -48,7 +48,10 @@ const Wrapper = styled.div `
 h4, h5 {
     text-align : center;
 }
-Jumbotron {
+.jumbotron {
     background-color : white;
+    max-width: 100%;
+    overflow-x: hidden;
+    
 }`;
 export default TextComponent;
