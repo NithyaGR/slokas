@@ -11,8 +11,9 @@ class TextComponent extends Component {
         // console.log(this.props.display);
         return(
             <Wrapper>
-                <Jumbotron> 
+               <Jumbotron>
                     <Container>
+               
                     <div className='text'>
                     <br/>
                     <h4>{this.props.display.slokaNo}</h4>
@@ -35,7 +36,7 @@ class TextComponent extends Component {
                     </div>
                     </div>
                     </Container>
-                </Jumbotron>
+                    </Jumbotron>
             </Wrapper>
         )
     }
@@ -44,7 +45,10 @@ const Wrapper = styled.div `
 .sanskrit {
     font-size: 20px;
 }
-.jumbotron{
-    text-align: center;
+h4, h5 {
+    text-align : center;
+}
+Jumbotron {
+    background-color : white;
 }`;
 export default TextComponent;

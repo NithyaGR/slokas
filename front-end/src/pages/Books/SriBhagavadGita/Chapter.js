@@ -68,15 +68,15 @@ class Chapter extends Component {
                 &raquo; Next
                 </Button>        
                 </div> 
-                <Jumbotron className='jumbotron'>  
-                    <Container className='glass'>
+                {/* <Jumbotron className='jumbotron'>  
+                    <Container className='glass'> */}
                     {this.state.texts.map((textData) => (
                         textData.slokaNo === this.state.displayText
                         ? <TextComponent display={textData} key={textData.slokaNo}/>
                     : '')
                     )}
-                    </Container>
-                </Jumbotron> 
+                    {/* </Container>
+                </Jumbotron>  */}
                 </div>
             </div>
             </Wrapper>
@@ -86,6 +86,7 @@ class Chapter extends Component {
 const Wrapper = styled.div `
 .jumbotron{
     text-align: center;
+    background-color: white;
 }`;
 export default withRouter(Chapter);
 
