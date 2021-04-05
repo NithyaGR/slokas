@@ -32,7 +32,7 @@ class TextComponent extends Component {
                     <br/>
                     <h5> Meaning </h5>   
                     <br/>
-                    <h5>{this.props.display.translation}</h5>
+                    <h5 className='translation'>{this.props.display.translation}</h5>
                     </div>
                     </div>
                     </Container>
@@ -49,9 +49,18 @@ min-height: calc(91vh - 55px);
 h4, h5 {
     text-align : center;
 }
+@media only screen and (min-width: 480px) {
+    .sanskrit {
+        font-size: 12px;
+    }
+    .english {
+        font-size: 12px;
+    }
+    .translation {
+        font-size: 12px;
+    }
+  }
 .jumbotron {
-    //background-color : white;
-    //max-width: 100%;
     //overflow-x: hidden;
     
 }`;
