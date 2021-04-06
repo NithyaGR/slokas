@@ -16,11 +16,11 @@
     display: flex;
     flex-direction: column;
 }
-.jumbotron .verses{
+ .verses{
     width: 70%;
 }
-/* @media only screen and (min-width: 480px) {
-    img {
+@media only screen and (max-width: 480px) {
+    .verses {
       width: 50%;
     }
-  } */
+  }
