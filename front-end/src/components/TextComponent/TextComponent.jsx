@@ -57,18 +57,17 @@ h4, h5 {
         margin-left : 5px;
         margin-right : 5px;
     }
-    .sanskrit {
+    pre {
         font-size: 12px;
     }
-    .english {
-        font-size: 12px;
-    }
+   
     .translation {
         font-size: 12px;
     }
   }
-.jumbotron {
-    width: 100%; 
+// .jumbotron {
+//     width: 100%; 
     
-}`;
+// }
+`;
 export default TextComponent;
