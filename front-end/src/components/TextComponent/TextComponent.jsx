@@ -49,7 +49,7 @@ min-height: calc(91vh - 55px);
 h4, h5 {
     text-align : center;
 }
-@media only screen and (min-width: 480px) {
+@media only screen and (max-width: 480px) {
     .jumbotron {
         margin-left : 5px;
         margin-right : 5px;

@@ -6,7 +6,9 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
-  
+  .registerForm {
+    width: 400px;
+  }
   .bg_image {
     /* The image used */
     /* background-image: url("../KrishnaArjuna.jpg");  */
@@ -14,11 +16,14 @@
     height: 100vh;
   
     /* Center and scale the image nicely */
-    background-position: center;
+    /* background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
   }
-  @media only screen and (min-width: 480px) {
+  @media only screen and (max-width: 480px) {
+    .registerForm {
+      width: 200px;
+    }
     img {
       width: 100%;
     }
