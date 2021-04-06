@@ -20,6 +20,9 @@
     background-repeat: no-repeat;
     background-size: cover; */
   }
+  .wrapper {
+    min-height: calc(91vh - 55px);
+  }
   @media only screen and (max-width: 480px) {
     .registerForm {
       width: 200px;
