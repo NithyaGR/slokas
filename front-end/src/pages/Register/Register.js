@@ -136,8 +136,8 @@ render(){
             </div>   
         </Container>
         </Jumbotron>
-        {/* <div className='bg_image'></div>
-        </div> */}
+        {/* <div className='bg_image'></div>*/}
+        </div> 
         </Wrapper>
     )
 }
