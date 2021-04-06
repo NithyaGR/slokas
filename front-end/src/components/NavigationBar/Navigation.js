@@ -14,7 +14,6 @@ class Navigation extends Component {
          console.log(sessionStorage.getItem('loggedInUser'));  
         return(
             <Wrapper>
-                <div>
                     <Navbar collapseOnSelect expand='lg' bg='dark' variant='dark' >
                     <Navbar.Brand href='/home'> Sri Krishna Asram</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -27,7 +26,6 @@ class Navigation extends Component {
                         :  <Nav.Link><NavLink to='/login' className="navlinks" >Login</NavLink></Nav.Link> }
                     </Navbar.Collapse>
                     </Navbar>
-                </div>
             </Wrapper>
         );
 }
