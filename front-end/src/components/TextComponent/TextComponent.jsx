@@ -25,7 +25,7 @@ class TextComponent extends Component {
                     <br/>
                     <div className='english'>
                         {/* for inline styles - 2 curly braces */}
-                    <pre style={{fontSize: 16}}>{this.props.display.textEnglish}</pre>
+                    <pre>{this.props.display.textEnglish}</pre>
                     {/* <h4>{this.props.display.textEnglish}</h4> */}
                     </div>
                     <div className='translation'>
@@ -45,6 +45,9 @@ const Wrapper = styled.div `
 min-height: calc(91vh - 55px);
 .sanskrit {
     font-size: 20px;
+}
+.english {
+    font-size: 16;
 }
 h4, h5 {
     text-align : center;
