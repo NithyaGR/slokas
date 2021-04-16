@@ -47,7 +47,7 @@ min-height: calc(91vh - 55px);
     font-size: 20px;
 }
 .english {
-    font-size: 16;
+    font-size: 16px;
 }
 h4, h5 {
     text-align : center;
