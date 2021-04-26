@@ -99,8 +99,8 @@ class Register extends Component {
 render(){
     return(
         
-        <Wrapper>
-            <div className='register'>
+        <Wrapper className = 'wrapper'>
+            {/* <div className='register'> */}
             <Jumbotron>
                 <Container>            
                 <br /> 
@@ -135,7 +135,7 @@ render(){
         </Container>
         </Jumbotron>
         
-        </div> 
+        {/* </div>  */}
         </Wrapper>
     )
 }
