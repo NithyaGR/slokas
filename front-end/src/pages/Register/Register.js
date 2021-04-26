@@ -103,7 +103,7 @@ render(){
             <Jumbotron>
                 <Container>            
                 <br /> 
-                <Form className = 'registerForm'>
+                <Form className = 'register'>
                 <Form.Group controlId='formBasicFirstName'>
                 <Form.Control type='first Name' placeholder='Enter Your First Name' id='firstName'
                     value = {this.state.firstName} onChange={this.handleChange} />
@@ -139,10 +139,16 @@ render(){
 }
 const Wrapper = styled.div `
 min-height: calc(91vh - 55px);
-.registerForm {
+.register {
     text-align: center;
     width: 400px;
 }
+@media only screen and (max-width: 480px) {
+    .register {
+        margin : auto;
+        width: 200px;
+    }
+  }
 .jumbotron {
     
     text-align: center;

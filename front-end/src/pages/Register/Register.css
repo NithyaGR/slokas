@@ -1,5 +1,5 @@
 .wrapper {
-    margin: 0%;
+    margin: 0px;
     height: 100vh;
     width: 100%;
     background-image: url("./Krishna.jpg");
@@ -8,24 +8,4 @@
     background-size: cover;
     
   }
-  
-  .registerForm {
-    margin-top: 10px;
-    margin-left: 10px;
-    width: 400px;
-  }
-  
-  .wrapper {
-    min-height: calc(91vh - 55px);
-    
-  }
-  @media only screen and (max-width: 480px) {
-    .registerForm {
-      margin-top: 5px;
-      margin-left: 5px;
-      width: 200px;
-    }
-    img {
-      width: 100%;
-    }
-  }
+ 
