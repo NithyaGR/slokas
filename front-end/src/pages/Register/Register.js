@@ -100,7 +100,6 @@ render(){
     return(
         
         <Wrapper className = 'wrapper'>
-            {/* <div className='register'> */}
             <Jumbotron>
                 <Container>            
                 <br /> 
@@ -134,8 +133,6 @@ render(){
                
         </Container>
         </Jumbotron>
-        
-        {/* </div>  */}
         </Wrapper>
     )
 }

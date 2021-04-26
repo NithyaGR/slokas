@@ -1,14 +1,16 @@
 
 .about {
-    height: 100%;
+    margin-top: 0px;
+    height: 100vh;
     width: 100%;
     background-image: url("../KrishnaArjuna.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
   }
   
-  .bg_image {
-    /* The image used */
-    /* background-image: url("../KrishnaArjuna.jpg");  */
-  
+  .bg_image { 
     /* Full height */
     height: 100vh;
   
