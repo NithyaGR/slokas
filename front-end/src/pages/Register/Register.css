@@ -8,22 +8,13 @@
     background-size: cover;
     
   }
+  
   .registerForm {
     margin-top: 10px;
     margin-left: 10px;
     width: 400px;
   }
-  .bg_image {
-    /* The image used */
-    /* background-image: url("../KrishnaArjuna.jpg");  */
-    /* Full height */
-    /* height: 100vh; */
   
-    /* Center and scale the image nicely */
-    /* background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; */
-  }
   .wrapper {
     min-height: calc(91vh - 55px);
     

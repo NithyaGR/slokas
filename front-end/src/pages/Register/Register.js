@@ -102,11 +102,9 @@ render(){
         <Wrapper>
             <div className='register'>
             <Jumbotron>
-                <Container>
-            <div className='registerForm'>
-                <br />
-                
-                <Form>
+                <Container>            
+                <br /> 
+                <Form className = 'registerForm'>
                 <Form.Group controlId='formBasicFirstName'>
                 <Form.Control type='first Name' placeholder='Enter Your First Name' id='firstName'
                     value = {this.state.firstName} onChange={this.handleChange} />
@@ -133,10 +131,10 @@ render(){
                  <br />
                  <Button variant='primary' type='submit'  onClick={this.handleClick}>Submit</Button>   
             </Form>
-            </div>   
+               
         </Container>
         </Jumbotron>
-        {/* <div className='bg_image'></div> */}
+        
         </div> 
         </Wrapper>
     )
