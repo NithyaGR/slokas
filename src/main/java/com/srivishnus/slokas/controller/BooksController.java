@@ -14,14 +14,14 @@ import com.srivishnus.slokas.repository.BooksRepository;
 
 @RestController
 //@CrossOrigin(origins = "http://localhost:4200")
-@RequestMapping("/*")
+@RequestMapping("/")
 
 public class BooksController {
 	
 	@Autowired
 	private BooksRepository booksRepository;
 	
-	@GetMapping 
+	@GetMapping(path = "/book")
 	public List<Books> getAllBooks(){
 		System.out.println("Reaching out the GET Method in the controller of - book - GetConroller Java");
 		return this.booksRepository.findAll();
