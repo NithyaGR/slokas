@@ -3,7 +3,7 @@ import axios from 'axios';
 class myService {
     executeHomeService(){
         console.log('executed home service to get all books')
-        return axios.get('/book')
+        return axios.get('/*')
         //return axios.get('http://localhost:9000/book')
         //return axios.get('http://localhost:9000/api/bgtext')
         

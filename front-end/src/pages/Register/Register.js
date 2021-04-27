@@ -149,6 +149,7 @@ min-height: calc(91vh - 55px);
         width: 200px;
     }
   }
+
 .jumbotron {
     
     text-align: center;
