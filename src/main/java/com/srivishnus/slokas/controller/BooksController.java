@@ -14,7 +14,8 @@ import com.srivishnus.slokas.repository.BooksRepository;
 
 @RestController
 //@CrossOrigin(origins = "http://localhost:4200")
-@RequestMapping("/book")
+//@RequestMapping("/book")
+@RequestMapping(value = { "", "/","/book","/home" })
 
 public class BooksController {
 	
@@ -26,13 +27,7 @@ public class BooksController {
 		System.out.println("Reaching out the GET Method in the controller of - book - GetConroller Java");
 		return this.booksRepository.findAll();
 	}
-	@GetMapping(path = "/*")
-	public List<Books> getAllBooks1(){
-		System.out.println("Reaching out the GET Method in the controller of - book - GetConroller Java");
-		return this.booksRepository.findAll();
-	}
-	
-	
+		
 //	@GetMapping ("/{title}")
 //	public Books getBookByTitle(@PathVariable (value = "title") String title){
 //		System.out.println("Reaching out the GET Method in the controller of GetConroller Java");
