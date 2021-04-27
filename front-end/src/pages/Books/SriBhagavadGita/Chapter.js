@@ -4,7 +4,7 @@ import { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import DataService from '../../../api/DataService';
 import TextComponent from '../../../components/TextComponent/TextComponent';
-import { Button } from 'react-bootstrap';
+import { Form, Button } from 'react-bootstrap';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Container from 'react-bootstrap/Container';
 import styled from 'styled-components';
@@ -58,16 +58,21 @@ class Chapter extends Component {
             <Wrapper>
             <div className='texts'>
             <h4>{sessionStorage.getItem('selectedChapterNo')} : {sessionStorage.getItem('selectedChapterName')}</h4>
-                <div className='main'>                   
-                <div className='dynamicButtons'>  
+            
+                <div className='main'>  
+                                 
+                <Form className='dynamicButtons'>  
                 <Button variant='primary' type='button' id='previous' onClick={this.handleClick}>
                 &laquo; Previous
                 </Button>
                 <span className='badge badge-info' id='textNo'>{this.state.displayText}</span>
+                <Form.Label>Verse No.</Form.Label>
+                <Form.Control type='verse' placeholder='verse no.' id='verse' value={this.state.displayText}/>
+
                 <Button variant='primary' type='button' id='next' onClick={this.handleClick}>
                 &raquo; Next
                 </Button>       
-                </div> 
+                </Form> 
                 <Jumbotron className='verses'>  
                     <Container className='glass'>
                     {this.state.texts.map((textData) => (
@@ -91,3 +96,30 @@ const Wrapper = styled.div `
 }`;
 export default withRouter(Chapter);
 
+{/* <Wrapper>
+            <div className='texts'>
+
+            <h4>{sessionStorage.getItem('selectedChapterNo')} : {sessionStorage.getItem('selectedChapterName')}</h4>
+                <div className='main'>                   
+                <div className='dynamicButtons'>  
+                <Button variant='primary' type='button' id='previous' onClick={this.handleClick}>
+                &laquo; Previous
+                </Button>
+                <span className='badge badge-info' id='textNo'>{this.state.displayText}</span>
+                <Button variant='primary' type='button' id='next' onClick={this.handleClick}>
+                &raquo; Next
+                </Button>       
+                </div> 
+                <Jumbotron className='verses'>  
+                    <Container className='glass'>
+                    {this.state.texts.map((textData) => (
+                        textData.slokaNo === this.state.displayText
+                        ? <TextComponent display={textData} key={textData.slokaNo}/>
+                    : '')
+                    )}
+                    </Container>
+                </Jumbotron> 
+                </div>
+            </div>
+            </Wrapper>
+                    */}
