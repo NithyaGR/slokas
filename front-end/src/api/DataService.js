@@ -8,6 +8,7 @@ class myService {
         //return axios.get('http://localhost:9000/api/bgtext')
         
     }
+
     executeBookService(count){
         console.log('executed book service to get selected books- chapters' );
         return axios.get(`/book/${count}`)

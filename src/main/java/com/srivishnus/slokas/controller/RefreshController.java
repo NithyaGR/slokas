@@ -12,13 +12,13 @@ import com.srivishnus.slokas.repository.BooksRepository;
 
 @RestController
 //@CrossOrigin(origins = "http://localhost:4200")
-@RequestMapping
+@RequestMapping(value = {"/login","/register","/about" })
 public class RefreshController {
 	
 	@Autowired
 	private BooksRepository booksRepository;
 
-	@GetMapping(path = "/about")
+	@GetMapping
 	public List<Books> getAllBooks(){
 		System.out.println("Reaching out the GET Method in the refresh controller - path is about");
 		return this.booksRepository.findAll();

@@ -15,7 +15,7 @@ import com.srivishnus.slokas.repository.BooksRepository;
 @RestController
 //@CrossOrigin(origins = "http://localhost:4200")
 //@RequestMapping("/book")
-@RequestMapping(value = { "", "/","/book","/home" })
+@RequestMapping(value = { "/book","/home" })
 
 public class BooksController {
 	
