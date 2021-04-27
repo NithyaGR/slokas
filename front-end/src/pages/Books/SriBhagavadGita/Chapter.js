@@ -63,7 +63,8 @@ class Chapter extends Component {
                 <Button variant='primary' type='button' id='previous' onClick={this.handleClick}>
                 &laquo; Previous
                 </Button>
-                    <span className='badge badge-info' id='textNo'>{this.state.displayText}</span>
+                {/* <span className='badge badge-info' id='textNo'>{this.state.displayText}</span> */}
+                <input type='text' className='badge badge-info' id='textNo'>{this.state.displayText}</input>
                 <Button variant='primary' type='button' id='next' onClick={this.handleClick}>
                 &raquo; Next
                 </Button>        
