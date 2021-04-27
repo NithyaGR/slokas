@@ -21,7 +21,7 @@ public class BooksController {
 	@Autowired
 	private BooksRepository booksRepository;
 	
-	@GetMapping(path = "/book")
+	@GetMapping
 	public List<Books> getAllBooks(){
 		System.out.println("Reaching out the GET Method in the controller of - book - GetConroller Java");
 		return this.booksRepository.findAll();
