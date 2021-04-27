@@ -6,15 +6,17 @@ import reportWebVitals from './reportWebVitals';
 
 //import { BrowserRouter as Router } from 'react-router-dom';
 import { Router } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import history from './helpers/history';
+import hasHistory from './helpers/history';
 // import { createStore } from 'redux';
 // import { Provider } from 'react-redux';
 import "bootstrap/dist/css/bootstrap.min.css";
 
 ReactDOM.render(
-    <Router history={history}>
+    <HashRouter history={hasHistory}>
     <App />
-    </Router>,
+    </HashRouter>,
   document.getElementById('root')
 );
 

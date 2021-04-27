@@ -68,12 +68,14 @@ render(){
             <Container>
             <h3>Login</h3>
             <Form className='login'>
-                <Form.Group controlId='formBasicEmail'>
+                {/* <Form.Group controlId='formBasicEmail'> */}
+                <Form.Group>
                     <Form.Label>Email address</Form.Label>
                     <Form.Control type='email' placeholder='Enter email' id='inputEmail'/>
                 </Form.Group>
 
-                <Form.Group controlId='formBasicPassword'>
+                {/* <Form.Group controlId='formBasicPassword'> */}
+                <Form.Group>
                     <Form.Label>Password</Form.Label>
                     <Form.Control type='password' placeholder='Password' id='inputPassword'/>
                 </Form.Group>

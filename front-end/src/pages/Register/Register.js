@@ -104,25 +104,29 @@ render(){
                 <Container>            
                 <br /> 
                 <Form className = 'register'>
-                <Form.Group controlId='formBasicFirstName'>
+                {/* <Form.Group controlId='formBasicFirstName'> */}
+                <Form.Group>
                 <Form.Control type='first Name' placeholder='Enter Your First Name' id='firstName'
                     value = {this.state.firstName} onChange={this.handleChange} />
                 <div className="text-danger">{this.state.errors.firstName}</div>    
                 </Form.Group>
                  <br />
-                 <Form.Group controlId='formBasicLastName'>
+                 {/* <Form.Group controlId='formBasicLastName'> */}
+                 <Form.Group>
                 <Form.Control type='lastName' id='lastName' 
                 placeholder='Enter Your Last Name' value = {this.state.lastName} onChange={this.handleChange}/>
                  <div className="text-danger">{this.state.errors.lastName}</div>
                  </Form.Group>
                  <br />
-                 <Form.Group controlId='formBasicEmail'>
+                 {/* <Form.Group controlId='formBasicEmailRegister'> */}
+                 <Form.Group>
                 <Form.Control type='email' id='email' 
                 placeholder='Enter Your Email' value = {this.state.email} onChange={this.handleChange}/>
                  <div className="text-danger">{this.state.errors.email}</div>
                  </Form.Group>
                  <br />
-                 <Form.Group controlId='formBasicPassword'>
+                 {/* <Form.Group controlId='formBasicPasswordRegister'> */}
+                 <Form.Group>
                 <Form.Control type='password'  id='userPassword' 
                 placeholder='Password' value = {this.state.password} onChange={this.handleChange}/> 
                  <div className="text-danger">{this.state.errors.userPassword}</div>
