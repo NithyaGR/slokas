@@ -66,8 +66,7 @@ class Chapter extends Component {
                 <span className='badge badge-info' id='textNo'>{this.state.displayText}</span>
                 <Button variant='primary' type='button' id='next' onClick={this.handleClick}>
                 &raquo; Next
-                </Button>  
-                <input type='text' className='badge badge-info' id='textNos'>{this.state.displayText}</input>      
+                </Button>       
                 </div> 
                 <Jumbotron className='verses'>  
                     <Container className='glass'>
