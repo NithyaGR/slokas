@@ -96,6 +96,11 @@ class Chapter extends Component {
                     value = {this.state.displayText} onChange={this.handleChange} />   
                 </Form.Group>
                 </Form>
+                <DropdownButton id="dropdown-basic-button" title="Dropdown button">
+                    {this.state.texts.map((textData) => (
+                       <Dropdown.Item>{textData.slokaNo}</Dropdown.Item> 
+                    ))}
+                </DropdownButton>    
                 <Jumbotron className='verses'>  
                     <Container className='glass'>
                     {this.state.texts.map((textData) => (
