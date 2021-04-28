@@ -89,7 +89,7 @@ class Chapter extends Component {
                 &raquo; Next
                 </Button>       
                 </div> 
-                <Form>
+                <Form onSubmit={this.handleClick}>
                 <Form.Group>
                 <Form.Control type='text' placeholder='Enter verse number' id='displayText'
                     value = {this.state.displayText} onChange={this.handleChange} />   
