@@ -56,7 +56,7 @@ class Chapter extends Component {
                 displayText: previousNo
             });
         }
-        if(e.target.id === 'text'){
+        if(e.target.id === 'displayText'){
             let textNo = Number(e.target.value);
             
             if(textNo < 1){
@@ -76,7 +76,7 @@ class Chapter extends Component {
         return(
             <Wrapper>
             <div className='texts'>
-
+            <br />
             <h4>{sessionStorage.getItem('selectedChapterNo')} : {sessionStorage.getItem('selectedChapterName')}</h4>
                 <div className='main'>                   
                 <div className='dynamicButtons'>  
@@ -88,6 +88,12 @@ class Chapter extends Component {
                 &raquo; Next
                 </Button>       
                 </div> 
+                <Form>
+                <Form.Group>
+                <Form.Control type='verseNumber' placeholder='Enter verse number' id='displayText'
+                    value = {this.state.displayText} onChange={this.handleChange} />   
+                </Form.Group>
+                </Form>
                 <Jumbotron className='verses'>  
                     <Container className='glass'>
                     {this.state.texts.map((textData) => (
@@ -110,30 +116,3 @@ const Wrapper = styled.div `
 }`;
 export default withRouter(Chapter);
 
-{/* <Wrapper>
-            <div className='texts'>
-
-            <h4>{sessionStorage.getItem('selectedChapterNo')} : {sessionStorage.getItem('selectedChapterName')}</h4>
-                <div className='main'>                   
-                <div className='dynamicButtons'>  
-                <Button variant='primary' type='button' id='previous' onClick={this.handleClick}>
-                &laquo; Previous
-                </Button>
-                <span className='badge badge-info' id='textNo'>{this.state.displayText}</span>
-                <Button variant='primary' type='button' id='next' onClick={this.handleClick}>
-                &raquo; Next
-                </Button>       
-                </div> 
-                <Jumbotron className='verses'>  
-                    <Container className='glass'>
-                    {this.state.texts.map((textData) => (
-                        textData.slokaNo === this.state.displayText
-                        ? <TextComponent display={textData} key={textData.slokaNo}/>
-                    : '')
-                    )}
-                    </Container>
-                </Jumbotron> 
-                </div>
-            </div>
-            </Wrapper>
-                    */}
