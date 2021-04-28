@@ -80,7 +80,7 @@ class Chapter extends Component {
             
                 <div className='main'>  
                 <input type='text' id='text' value={this.state.displayText} onClick={this.handleClick}></input>
-                <div className='dynamicButtons'>  
+                <Form className='dynamicButtons'>  
                 <Button variant='primary' type='button' id='previous' onClick={this.handleClick}>
                 &laquo; Previous
                 </Button>
@@ -90,7 +90,7 @@ class Chapter extends Component {
                 <Button variant='primary' type='button' id='next' onClick={this.handleClick}>
                 &raquo; Next
                 </Button>       
-                </div> 
+                </Form> 
                 <Jumbotron className='verses'>  
                     <Container className='glass'>
                     {this.state.texts.map((textData) => (
