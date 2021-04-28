@@ -83,7 +83,7 @@ class Chapter extends Component {
                 &raquo; Next
                 </Button>       
                 </div> 
-                <DropdownButton id="versesDD" title="Select Verse" onSelect={this.change}>
+                <DropdownButton className='dd' id="versesDD" title="Select Verse" onSelect={this.change}>
                     {this.state.texts.map((textData) => (
                        <Dropdown.Item eventKey={textData.slokaNo}>{textData.slokaNo}</Dropdown.Item> 
                     ))}
@@ -105,8 +105,8 @@ class Chapter extends Component {
 }
 const Wrapper = styled.div `
     min-height: calc(91vh - 55px);
-    #versesDD {
-        max-height: 500px;
+    .dd {
+        max-height: 300px;
         overflow-y: scroll;
     }
     .jumbotron {
