@@ -4,7 +4,7 @@ import { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import DataService from '../../../api/DataService';
 import TextComponent from '../../../components/TextComponent/TextComponent';
-import { Form, Button } from 'react-bootstrap';
+import { Form, Button, DropdownButton, Dropdown } from 'react-bootstrap';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Container from 'react-bootstrap/Container';
 import styled from 'styled-components';
@@ -26,6 +26,11 @@ class Chapter extends Component {
                   this.setState({texts : response.data});
               }
           )       
+    }
+    handleChange = (e) =>{
+        //to bind the text which we entered and to store in that corresponding ids  
+        this.setState({ [e.target.id]: e.target.value });
+        //console.log('onChange');
     }
     handleClick = (e) => {
         //console.log(e.target.id);
@@ -60,14 +65,18 @@ class Chapter extends Component {
             <h4>{sessionStorage.getItem('selectedChapterNo')} : {sessionStorage.getItem('selectedChapterName')}</h4>
             
                 <div className='main'>  
-                                 
+                <input type='text' id='text' value={this.state.displayText} onClick={this.handleClick}></input>
+                {/* <DropdownButton id="dropdown-basic-button" title="Dropdown button">
+                    <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                    <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                    <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                </DropdownButton> */}
                 <Form className='dynamicButtons'>  
                 <Button variant='primary' type='button' id='previous' onClick={this.handleClick}>
                 &laquo; Previous
                 </Button>
                 <span className='badge badge-info' id='textNo'>{this.state.displayText}</span>
-                <Form.Label>Verse No.</Form.Label>
-                <Form.Control type='verse' placeholder='verse no.' id='verse' value={this.state.displayText}/>
+                
 
                 <Button variant='primary' type='button' id='next' onClick={this.handleClick}>
                 &raquo; Next
