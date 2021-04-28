@@ -106,10 +106,10 @@ class Chapter extends Component {
 }
 const Wrapper = styled.div `
     min-height: calc(91vh - 55px);
-    .dd {
-        max-height: 500px;
-        overflow-y: scroll;
-    }
+    // .dd {
+    //     max-height: 500px;
+    //     overflow-y: scroll;
+    // }
     .jumbotron {
         text-align: center; 
 }`;
