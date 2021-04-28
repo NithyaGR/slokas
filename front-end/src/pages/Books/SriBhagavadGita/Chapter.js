@@ -76,21 +76,18 @@ class Chapter extends Component {
         return(
             <Wrapper>
             <div className='texts'>
+
             <h4>{sessionStorage.getItem('selectedChapterNo')} : {sessionStorage.getItem('selectedChapterName')}</h4>
-            
-                <div className='main'>  
-                {/* <input type='text' id='text' value={this.state.displayText} onClick={this.handleClick}></input> */}
-                <Form className='dynamicButtons'>  
+                <div className='main'>                   
+                <div className='dynamicButtons'>  
                 <Button variant='primary' type='button' id='previous' onClick={this.handleClick}>
                 &laquo; Previous
                 </Button>
                 <span className='badge badge-info' id='textNo'>{this.state.displayText}</span>
-                
-
                 <Button variant='primary' type='button' id='next' onClick={this.handleClick}>
                 &raquo; Next
                 </Button>       
-                </Form> 
+                </div> 
                 <Jumbotron className='verses'>  
                     <Container className='glass'>
                     {this.state.texts.map((textData) => (
@@ -108,9 +105,6 @@ class Chapter extends Component {
 }
 const Wrapper = styled.div `
     min-height: calc(91vh - 55px);
-    .text {
-        width: 75px;
-    }
     .jumbotron {
         text-align: center; 
 }`;
