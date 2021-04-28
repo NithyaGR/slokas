@@ -83,6 +83,7 @@ class Chapter extends Component {
                 &raquo; Next
                 </Button>       
                 </div> 
+                <br/>
                 <DropdownButton className='dd' id="versesDD" title="Select Verse" onSelect={this.change}>
                     {this.state.texts.map((textData) => (
                        <Dropdown.Item eventKey={textData.slokaNo}>{textData.slokaNo}</Dropdown.Item> 
