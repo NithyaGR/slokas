@@ -34,6 +34,7 @@ class Chapter extends Component {
     // }
     change = eventKey =>{
         alert(`You have selected ${eventKey}`);
+        console.log(eventKey);
         this.setState(
             {
                 displayText: eventKey
@@ -106,10 +107,10 @@ class Chapter extends Component {
 }
 const Wrapper = styled.div `
     min-height: calc(91vh - 55px);
-    .dropdown {
-        max-height: 300px;
-        overflow-y: scroll;
-    }
+    // .dropdown {
+    //     max-height: 300px;
+    //     overflow-y: scroll;
+    // }
     .jumbotron {
         text-align: center; 
 }`;
