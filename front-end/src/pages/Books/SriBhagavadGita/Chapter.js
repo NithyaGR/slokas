@@ -56,6 +56,20 @@ class Chapter extends Component {
                 displayText: previousNo
             });
         }
+        if(e.target.id === 'text'){
+            let textNo = Number(e.target.value);
+            
+            if(textNo < 1){
+                alert("Please enter a valid text number");
+            }
+            if(textNo > this.state.texts.length){
+                alert(`There are only {this.state.texts.length} verses in this chapter`);
+            }
+            this.setState(
+                {
+                displayText: e.target.value
+            });
+        }
     }
     render() {
 
