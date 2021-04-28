@@ -27,13 +27,19 @@ class Chapter extends Component {
               }
           )       
     }
-    handleChange = (e) =>{
-        //to bind the text which we entered and to store in that corresponding ids  
-        this.setState({ [e.target.id]: e.target.value });
-        console.log('onChange');
-    }
+    // handleChange = (e) =>{
+    //     //to bind the text which we entered and to store in that corresponding ids  
+    //     this.setState({ [e.target.id]: e.target.value });
+    //     console.log('onChange');
+    // }
     change = eventKey =>{
         alert(`You have selected ${eventKey}`);
+        this.setState(
+            {
+                displayText: eventKey
+            }
+        )
+
     }
     handleClick = (e) => {
         //console.log(e.target.id);
@@ -59,22 +65,6 @@ class Chapter extends Component {
                 displayText: previousNo
             });
         }
-        if(e.target.id === 'displayText'){
-            console.log('Inside text box');
-            console.log(e.target.value);
-            let textNo = Number(e.target.value);
-            console.log(textNo);
-            if(textNo < 1){
-                alert("Please enter a valid text number");
-            }
-            if(textNo > this.state.texts.length){
-                alert(`There are only {this.state.texts.length} verses in this chapter`);
-            }
-            this.setState(
-                {
-                displayText: textNo
-            });
-        }
     }
     render() {
 
@@ -93,13 +83,7 @@ class Chapter extends Component {
                 &raquo; Next
                 </Button>       
                 </div> 
-                <Form onSubmit={this.handleClick}>
-                <Form.Group>
-                <Form.Control type='text' placeholder='Enter verse number' id='displayText'
-                    value = {this.state.displayText} onChange={this.handleChange} />   
-                </Form.Group>
-                </Form>
-                <DropdownButton id="dropdown-basic-button" title="Dropdown button" onSelect={this.change}>
+                <DropdownButton id="versesDD" title="Select Verse" onSelect={this.change}>
                     {this.state.texts.map((textData) => (
                        <Dropdown.Item eventKey={textData.slokaNo}>{textData.slokaNo}</Dropdown.Item> 
                     ))}
@@ -121,6 +105,10 @@ class Chapter extends Component {
 }
 const Wrapper = styled.div `
     min-height: calc(91vh - 55px);
+    #versesDD {
+        max-height: 500px;
+        overflow-y: scroll;
+    }
     .jumbotron {
         text-align: center; 
 }`;
