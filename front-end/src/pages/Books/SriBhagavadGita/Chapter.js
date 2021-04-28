@@ -79,7 +79,7 @@ class Chapter extends Component {
             <h4>{sessionStorage.getItem('selectedChapterNo')} : {sessionStorage.getItem('selectedChapterName')}</h4>
             
                 <div className='main'>  
-                <input type='text' id='text' value={this.state.displayText} onClick={this.handleClick}></input>
+                {/* <input type='text' id='text' value={this.state.displayText} onClick={this.handleClick}></input> */}
                 <Form className='dynamicButtons'>  
                 <Button variant='primary' type='button' id='previous' onClick={this.handleClick}>
                 &laquo; Previous
