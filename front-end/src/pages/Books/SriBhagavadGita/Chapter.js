@@ -88,9 +88,11 @@ class Chapter extends Component {
                 </div> 
                 <br/>
                 <DropdownButton id="versesDD" title="Verse" onSelect={this.change}>
+                    <div style={{height: "100px",overflowY:"auto" }}>
                     {this.state.texts.map((textData) => (
                        <Dropdown.Item eventKey={textData.slokaNo}>{textData.slokaNo}</Dropdown.Item> 
                     ))}
+                    </div>
                 </DropdownButton>    
                 <Jumbotron className='verses'>  
                     <Container className='glass'>
