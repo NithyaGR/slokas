@@ -29,8 +29,9 @@ class Chapter extends Component {
     }
     handleChange = (e) =>{
         //to bind the text which we entered and to store in that corresponding ids  
-        this.setState({ [e.target.id]: e.target.value });
+        //this.setState({ [e.target.id]: e.target.value });
         console.log('onChange');
+        alert("You have selected");
     }
     handleClick = (e) => {
         //console.log(e.target.id);
@@ -96,7 +97,7 @@ class Chapter extends Component {
                     value = {this.state.displayText} onChange={this.handleChange} />   
                 </Form.Group>
                 </Form>
-                <DropdownButton id="dropdown-basic-button" title="Dropdown button">
+                <DropdownButton id="dropdown-basic-button" title="Dropdown button" onSelect={this.change}>
                     {this.state.texts.map((textData) => (
                        <Dropdown.Item>{textData.slokaNo}</Dropdown.Item> 
                     ))}
