@@ -29,9 +29,11 @@ class Chapter extends Component {
     }
     handleChange = (e) =>{
         //to bind the text which we entered and to store in that corresponding ids  
-        //this.setState({ [e.target.id]: e.target.value });
+        this.setState({ [e.target.id]: e.target.value });
         console.log('onChange');
-        alert("You have selected");
+    }
+    change = eventKey =>{
+        alert(`You have selected ${eventKey}`);
     }
     handleClick = (e) => {
         //console.log(e.target.id);
@@ -99,7 +101,7 @@ class Chapter extends Component {
                 </Form>
                 <DropdownButton id="dropdown-basic-button" title="Dropdown button" onSelect={this.change}>
                     {this.state.texts.map((textData) => (
-                       <Dropdown.Item>{textData.slokaNo}</Dropdown.Item> 
+                       <Dropdown.Item eventKey={textData.slokaNo}>{textData.slokaNo}</Dropdown.Item> 
                     ))}
                 </DropdownButton>    
                 <Jumbotron className='verses'>  
