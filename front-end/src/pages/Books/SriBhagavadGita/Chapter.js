@@ -57,8 +57,9 @@ class Chapter extends Component {
             });
         }
         if(e.target.id === 'displayText'){
+            console.log('Inside text box');
             let textNo = Number(e.target.value);
-            
+            console.log(textNo);
             if(textNo < 1){
                 alert("Please enter a valid text number");
             }
