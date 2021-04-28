@@ -30,7 +30,7 @@ class Chapter extends Component {
     handleChange = (e) =>{
         //to bind the text which we entered and to store in that corresponding ids  
         this.setState({ [e.target.id]: e.target.value });
-        //console.log('onChange');
+        console.log('onChange');
     }
     handleClick = (e) => {
         //console.log(e.target.id);
@@ -91,7 +91,7 @@ class Chapter extends Component {
                 </div> 
                 <Form>
                 <Form.Group>
-                <Form.Control type='verseNumber' placeholder='Enter verse number' id='displayText'
+                <Form.Control type='text' placeholder='Enter verse number' id='displayText'
                     value = {this.state.displayText} onChange={this.handleChange} />   
                 </Form.Group>
                 </Form>
