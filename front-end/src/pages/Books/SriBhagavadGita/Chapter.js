@@ -106,7 +106,7 @@ class Chapter extends Component {
 }
 const Wrapper = styled.div `
     min-height: calc(91vh - 55px);
-    #versesDD {
+    .dropdown {
         max-height: 300px;
         overflow-y: scroll;
     }
