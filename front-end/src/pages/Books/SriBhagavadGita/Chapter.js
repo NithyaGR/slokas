@@ -35,9 +35,11 @@ class Chapter extends Component {
     change = eventKey =>{
         alert(`You have selected ${eventKey}`);
         console.log(eventKey);
+        let dt = Number(eventKey);
+        console.log(dt);
         this.setState(
             {
-                displayText: eventKey
+                displayText: dt
             }
         )
 
@@ -108,9 +110,15 @@ class Chapter extends Component {
 const Wrapper = styled.div `
     min-height: calc(91vh - 55px);
     // .dropdown {
+    //      height: auto; 
     //     max-height: 300px;
     //     overflow-y: scroll;
     // }
+    #versesDD {
+        height: auto;
+        max-height: 200px;
+        overflow-x: hidden;
+    }
     .jumbotron {
         text-align: center; 
 }`;
