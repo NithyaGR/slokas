@@ -33,10 +33,10 @@ class Chapter extends Component {
     //     console.log('onChange');
     // }
     change = eventKey =>{
-        alert(`You have selected ${eventKey}`);
-        console.log(eventKey);
+        //alert(`You have selected ${eventKey}`);
+        //console.log(eventKey);
         let dt = Number(eventKey);
-        console.log(dt);
+        //console.log(dt);
         this.setState(
             {
                 displayText: dt
@@ -88,7 +88,7 @@ class Chapter extends Component {
                 </div> 
                 <br/>
                 <DropdownButton id="versesDD" title="Verse" onSelect={this.change}>
-                    <div style={{height: "100px",overflowY:"auto" }}>
+                    <div className = "dd">
                     {this.state.texts.map((textData) => (
                        <Dropdown.Item eventKey={textData.slokaNo}>{textData.slokaNo}</Dropdown.Item> 
                     ))}
@@ -111,16 +111,16 @@ class Chapter extends Component {
 }
 const Wrapper = styled.div `
     min-height: calc(91vh - 55px);
-    // .dropdown {
-    //      height: auto; 
-    //     max-height: 300px;
-    //     overflow-y: scroll;
-    // }
-    #versesDD {
-        height: auto;
-        max-height: 200px;
-        overflow-x: hidden;
+    .dd {
+         
+        height: 200px;
+        overflow-y: auto;
     }
+    // #versesDD {
+    //     height: auto;
+    //     max-height: 200px;
+    //     overflow-x: hidden;
+    // } style={{height: "100px",overflowY:"auto" }}
     .jumbotron {
         text-align: center; 
 }`;
