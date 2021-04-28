@@ -58,6 +58,7 @@ class Chapter extends Component {
         }
         if(e.target.id === 'displayText'){
             console.log('Inside text box');
+            console.log(e.target.value);
             let textNo = Number(e.target.value);
             console.log(textNo);
             if(textNo < 1){
@@ -68,7 +69,7 @@ class Chapter extends Component {
             }
             this.setState(
                 {
-                displayText: e.target.value
+                displayText: textNo
             });
         }
     }
