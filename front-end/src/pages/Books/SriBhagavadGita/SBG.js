@@ -18,7 +18,7 @@ class SBG extends Component {
         sessionStorage.setItem('selectedChapterNo', count);
         sessionStorage.setItem('selectedChapterName', name);
         //console.log(`/book/bg/chapter/${count}`);
-        if(count === 12 || count === 15 || count === 1){
+        if(count === 12 || count === 15 || count === 1 || count === 2){
             this.props.history.push('/chapter');
         }
         // this.props.history.push(`/book/bg/chapter/${count}`);
