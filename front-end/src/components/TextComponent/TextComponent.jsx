@@ -8,7 +8,7 @@ import styled from 'styled-components';
 class TextComponent extends Component {
   
     render (){
-        // console.log(this.props.display);
+         console.log(this.props.display.translation);
         return(
             <Wrapper>
                <Jumbotron>
