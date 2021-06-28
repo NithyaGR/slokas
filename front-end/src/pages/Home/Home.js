@@ -67,6 +67,9 @@ class Home extends Component {
     }
 }
 const Wrapper = styled.div `
+td {
+    text-align: left;
+}
 a {
     text-decoration: none;
     cursor: pointer;
