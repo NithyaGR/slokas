@@ -54,7 +54,7 @@ class SBG extends Component {
                             {this.state.chapters.map(chapter => (
                                 <tr key = {chapter.chapterNo}> 
                                     <td>{chapter.chapterNo} </td>
-                                    <td onClick= {() => this.chapterClicked(chapter.chapterNo, chapter.chapterNameSanskrit)}> <a>{chapter.chapterNameSanskrit}</a></td>
+                                    <td onClick= {() => this.chapterClicked(chapter.chapterNo, chapter.chapterNameSanskrit)}> <a href="#">{chapter.chapterNameSanskrit}</a></td>
                                     {/* <td onClick = {() => this.chapterClicked(chapter.chapterNo)}>{chapter.chapterNameSanskrit}</td> */}
                                     {/* <td>{book.bookAuthor}</td> */}
                                 </tr>
@@ -73,6 +73,7 @@ const Wrapper = styled.div `
 a {
     text-decoration: none;
     cursor: pointer;
+    color: black;
 }
 .jumbotron {
     text-align: center;

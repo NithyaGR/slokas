@@ -70,6 +70,7 @@ const Wrapper = styled.div `
 a {
     text-decoration: none;
     cursor: pointer;
+    color: black;
 }
 .jumbotron{
     text-align: center;
