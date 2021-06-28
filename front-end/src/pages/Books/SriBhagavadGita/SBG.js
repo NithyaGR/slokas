@@ -2,6 +2,7 @@ import DataService from "../../../api/DataService";
 //import { Link, matchPath } from 'react-router-dom';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Container from 'react-bootstrap/Container';
+import Table from 'react-bootstrap-table';
 import styled from 'styled-components';
 
 
@@ -41,7 +42,7 @@ class SBG extends Component {
                     <Container>
             
                 <h3> Sri Bhagavad Gita</h3> 
-                        <table className='table'>
+                        <Table className='table'>
                         <thead className='thead-dark'>
                             <tr>
                                 <th scope='col'>No</th>
@@ -53,13 +54,13 @@ class SBG extends Component {
                             {this.state.chapters.map(chapter => (
                                 <tr key = {chapter.chapterNo}> 
                                     <td>{chapter.chapterNo} </td>
-                                    <td onClick= {() => this.chapterClicked(chapter.chapterNo, chapter.chapterNameSanskrit)}> {chapter.chapterNameSanskrit}</td>
+                                    <td onClick= {() => this.chapterClicked(chapter.chapterNo, chapter.chapterNameSanskrit)}> <a>{chapter.chapterNameSanskrit}</a></td>
                                     {/* <td onClick = {() => this.chapterClicked(chapter.chapterNo)}>{chapter.chapterNameSanskrit}</td> */}
                                     {/* <td>{book.bookAuthor}</td> */}
                                 </tr>
                             ))}
                         </tbody>
-                        </table>
+                        </Table>
 
             
             </Container>
@@ -69,7 +70,11 @@ class SBG extends Component {
     }
 }
 const Wrapper = styled.div `
-.jumbotron{
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+.jumbotron {
     text-align: center;
 }`;
 export default SBG;
