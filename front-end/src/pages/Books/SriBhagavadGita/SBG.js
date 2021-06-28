@@ -42,7 +42,7 @@ class SBG extends Component {
                     <Container>
             
                 <h3> Sri Bhagavad Gita</h3> 
-                        <Table className='table'>
+                        <table className='table'>
                         <thead className='thead-dark'>
                             <tr>
                                 <th scope='col'>No</th>
@@ -60,7 +60,7 @@ class SBG extends Component {
                                 </tr>
                             ))}
                         </tbody>
-                        </Table>
+                        </table>
 
             
             </Container>
