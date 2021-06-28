@@ -53,7 +53,7 @@ class Home extends Component {
                 {this.state.books.map(book => (
                     <tr key = {count++}> 
                         <td>{count} </td>
-                        <td onClick = {() => this.bookClicked(book.bookTitle)}><a href="#">{book.bookTitle}</a></td>
+                        <td onClick = {() => this.bookClicked(book.bookTitle)}><a>{book.bookTitle}</a></td>
                         <td>{book.bookAuthor}</td>
                     </tr>
                 ))}
