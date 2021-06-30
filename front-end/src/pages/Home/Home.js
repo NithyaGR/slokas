@@ -67,7 +67,7 @@ class Home extends Component {
     }
 }
 const Wrapper = styled.div `
-td {
+th, td {
     text-align: left;
 }
 a {

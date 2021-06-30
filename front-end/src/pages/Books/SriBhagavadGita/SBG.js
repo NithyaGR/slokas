@@ -70,6 +70,9 @@ class SBG extends Component {
     }
 }
 const Wrapper = styled.div `
+th, td {
+    text-align: left;
+}
 a {
     text-decoration: none;
     cursor: pointer;
