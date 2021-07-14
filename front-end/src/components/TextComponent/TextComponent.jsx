@@ -13,9 +13,7 @@ class TextComponent extends Component {
             <Wrapper>
                <Jumbotron>
                     <Container>
-               
-                    <div className='text'>
-                    <br/>
+                    {/* <br/> */}
                     <h4>{this.props.display.slokaNo}</h4>
                     {/* <br/> */}
                     <div className='sanskrit'>
@@ -34,9 +32,8 @@ class TextComponent extends Component {
                     <br/>
                     <h5 className='translation'>{this.props.display.translation}</h5>
                     </div>
-                    </div>
                     </Container>
-                    </Jumbotron>
+                </Jumbotron>
             </Wrapper>
         )
     }
