@@ -20,16 +20,16 @@ class TextComponent extends Component {
                     {/* <br/> */}
                     <pre>{this.props.display.textSanskrit}</pre>
                     </div>
-                    <br/>
+                    {/* <br/> */}
                     <div className='english'>
                         {/* for inline styles - 2 curly braces */}
                     <pre>{this.props.display.textEnglish}</pre>
                     {/* <h4>{this.props.display.textEnglish}</h4> */}
                     </div>
                     <div className='translation'>
-                    <br/>
+                    {/* <br/> */}
                     <h5> Meaning </h5>   
-                    <br/>
+                    {/* <br/> */}
                     <h5 className='translation'>{this.props.display.translation}</h5>
                     </div>
                     </Container>
