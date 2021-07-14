@@ -17,7 +17,7 @@ class TextComponent extends Component {
                     <div className='text'>
                     <br/>
                     <h4>{this.props.display.slokaNo}</h4>
-                    <br/>
+                    {/* <br/> */}
                     <div className='sanskrit'>
                     <br/>
                     <h4><pre>{this.props.display.textSanskrit}</pre></h4>
